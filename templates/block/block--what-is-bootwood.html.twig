@@ -1,0 +1,82 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+
+    <div class="about-block">
+      <h1 class="about-title">{{'What is Bootwood?'|t}}</h1>
+      <p>{{"Bootwood is a beautiful wood recommended by leading architects.
+        It is sustainable, durable and requires no maintenance beyond normal cleaning.
+        Bootwood’s performance has been proven in a variety of applications including decking and cladding."|t}}</p>
+    </div>
+    <iframe width="100%" src="https://www.youtube.com/embed/3Dku9a67Xug" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="about-desc">
+      <p>{{ "Developed in Norway, the Bootwood® technology is an environmentally friendly, patented process that enhances the properties of sustainable softwood with a bio-based liquid. The process permanently modifies the wood cell walls giving Bootwood premium hardwood characteristics and a rich brown color. After exposure to sun and rain the wood develops a natural silver-gray patina. Performance is maintained, while beauty is enhanced. Bootwood is available in clear and character grade." |t }} </p>
+
+<p> {{ "Recognized as Technology Pioneer by the World Economic Forum and listed as a Global Cleantech 100 company, Bootwood has been embraced by leading architects, designers and developers, which are served through a global sales and distribution network."|t }}</p>
+      <div class="about-benefits">
+        <div class="about-text">
+          <h1>{{ "What are the benefits of Bootwood?"|t }}</h1>
+          <p>{{ "Bootwood is beautiful wood recommended by leading architects. It is sustainable, durable and requires no maintenance beyond normal cleaning."|t}}</p>
+        </div>
+        {# TO DO - TRANSLATION OF ABOVE#}
+        <div class="about-img">
+          <img src="/themes/custom/bootwood/images/homepage/longlife.png" alt="" class="longlife-img">
+          <h3 class="benefits-text">{{"guaranteed long life"|t}}</h3>
+          <p>{{ "outdoor life time warranty for 30 years"|t}}</p>
+        </div>
+      </div>
+
+      {# BOOTWOOD DECIDED TO REMOVE THIS BLOCK FOR NOW, LEFT FOR POTENTIAL REUPLOAD #}
+      {#<div class="register-block">#}
+        {#<div class="img"></div>#}
+        {#<img src="/themes/custom/bootwood/images/homepage/about-bottomimg.jpg" alt="" class="map-img">#}
+        {#<button class="register-btn btn-primary" href="#">{{ "Register"|t }}</button>#}
+      {#</div>#}
+    </div>
+    <div{{ content_attributes.addClass('content') }}>
+      {{ content }}
+    </div>
+  {% endblock %}
+</div>

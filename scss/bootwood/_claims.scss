@@ -1,0 +1,433 @@
+.path-claims {
+  .region-header {
+    display: none;
+  }
+  article {
+    > div > .links{
+      display: block;
+      position: static;
+      li:not(.quickedit) {
+        display: none;
+      }
+      li.quickedit {
+        position: absolute;
+        top:0;
+        right:0;
+      }
+    }
+  }
+
+}
+
+.node-claim-form {
+  .field--name-field-installation-address-bool legend span,
+  .field-group-html-element h3 {
+    font-size: 1.9em;
+    color: #382306;
+    padding: 10px 8px;
+    margin: -10px -15px;
+    display: block;
+    font-weight: normal;
+  }
+  .field--name-field-installation-address {
+    .js-form-wrapper {
+      .panel-heading {
+        display: none;
+      }
+    }
+    .panel-body {
+      margin-left: -15px;
+      .form-group {
+        .js-form-type-.form-item- {
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+  .col-md-6.form-type-address-country.form-item.form-item-field-installation-address-0-address-country-code {
+    > .sr-only {
+      width: auto;
+      height: auto;
+      position: static;
+    }
+  }
+}
+.claim-thank-you .region-content {
+  text-align: center;
+  a {
+    color: $bootwood-orange;
+  }
+}
+
+article.node--type-delivery-assignment,
+article.node--type-claim,
+article.final-conclusion {
+  p {
+    font-size: 1em;
+  }
+
+  .flex-table-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    .field {
+      flex-basis: 100%;
+      .field--label {
+        float: none;
+        &:after {
+          content: '';
+        }
+      }
+      .field--item {
+        background-color: $bootwood-orange;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        padding-left: 4px;
+        padding-top: 1px;
+      }
+    }
+  }
+
+  .pre-compensation {
+    .field--name-field-who-bills {
+      padding: 10px;
+      p {
+        position: relative;
+        padding-left: 40px;
+      }
+      p::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid $bootwood-orange;
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      .selected::before {
+        background: $bootwood-orange;
+      }
+      span {
+        display: inline-block;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .quickedit-form {
+    width: 40vw;
+    max-width: 40vw;
+  }
+
+  .field--name-field-pictures > .field--label,
+  .field--name-field-proof > .field--label {
+    border: 1px solid #000;
+    border-bottom: none;
+    padding: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .field--name-field-pictures > .field--items > .field--item,
+  .field--name-field-proof > .field--items > .field--item {
+    > div {
+      display: flex;
+      flex-flow: row wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      .field--type-image, .field--name-field-media-image-comment {
+        flex-basis: 100%;
+        padding: 10px;
+        border: 1px solid #000;
+        border-bottom: none;
+      }
+    }
+    &:last-child > div {
+      .field--name-field-media-image-comment {
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+}
+
+.flex-table {
+  display: flex;
+  flex-flow: row wrap;
+
+  &.flex-table-description {
+    .flex-row {
+      flex-basis: 100%;
+      border: 1px solid #000;
+      padding: 10px;
+    }
+
+    &-bottom .flex-row {
+      border-top: none;
+    }
+  }
+
+  .field {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+    .flex-row {
+      flex-basis: 100%;
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+      border-left: 1px solid #000;
+      padding: 10px;
+    }
+  }
+  .field--name-field-who-bills {
+    .field--item {
+      flex-basis: 100%;
+      margin: 4px 0;
+    }
+  }
+  .flex-table-rowspan {
+    flex-basis: 100%;
+    flex-flow: column;
+  }
+
+  &.row-first .field:first-child .flex-row:first-child {
+    &.row-first .field:first-child .flex-row:first-child, .field--name-field-inspection-date {
+      border-top: 1px solid #000;
+    }
+
+    &.row-first .field--name-field-who-bill-bootwood .field--label {
+      border-left: 1px solid #000;
+    }
+  }
+  &.flex-table-no-top-description,
+  &.pre-compensation .field--label {
+    border-top: 1px solid #000;
+  }
+}
+
+#claim-comments .field--name-field-conversation-with-customer .field--label {
+  border: none;
+}
+
+.node--view-mode-final-conclusion .btn-primary {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: $screen-lg) {
+  article.node--type-delivery-assignment .flex-table-checkboxes .field {
+    flex-basis: 25%;
+  }
+
+  article.node--type-claim,
+  article.final-conclusion {
+    .field--name-field-pictures > .field--items > .field--item,
+    .field--name-field-proof > .field--items > .field--item {
+      > div {
+        .field--type-image, .field--name-field-media-image-comment {
+          flex-basis: 50%;
+        }
+        .field--name-field-media-image-comment {
+          border-left: none;
+        }
+      }
+      &:last-child > div {
+        .field--type-image, .field--name-field-media-image-comment {
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
+
+  .flex-table {
+
+    &.flex-table-description {
+      &-top .flex-row {
+        border-bottom: none;
+      }
+      &-half .flex-row {
+        flex-basis: 50%;
+      }
+    }
+
+    .field:not(.field-multiple) {
+      flex-basis: 50%;
+    }
+
+    .field {
+      .flex-row {
+        border-left: none;
+
+        &.field--label {
+          flex-basis: 36%;
+        }
+
+        &.field--item {
+          flex-basis: 64%;
+        }
+      }
+    }
+
+    .field-multiple {
+      .field:nth-child(2n+2) {
+        .field--label {
+          border-left: none;
+        }
+      }
+    }
+
+    .flex-table-rowspan {
+      flex-basis: 50%;
+    }
+    &.row-first .field .flex-row {
+      border-top: 1px solid #000;
+    }
+    &.row-first .field--name-field-contractor-phone .flex-row:first-child {
+      border-left: none;
+    }
+    &.row-first .field--name-field-contractor-phone .flex-row {
+      border-bottom: none;
+    }
+    &.pre-compensation .field .field--label {
+      border-left: 1px solid #000;
+    }
+    &.flex-table-no-top-description {
+      border-top: none;
+    }
+  }
+  .field:first-child .flex-row:first-child {
+    border-left: 1px solid #000;
+  }
+}
+
+.final-conclusion-send-report {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.delivery-assigment-button {
+  margin-top: 50px;
+}
+
+.form-required:after {
+  margin-bottom: 5px;
+}
+
+.node-delivery-assignment-form,
+.node-delivery-assignment-delivery-assignment-form,
+.node-claim-internal-evaluation-form,
+.node-claim-final-conclusion-form {
+  .form-type-vertical-tabs {
+    display: none;
+  }
+
+}
+
+
+.field--name-field-conversation-with-customer {
+  mark, form:not(.sidebar-exposed-form) .js-form-wrapper .js-form-item label.control-label {
+    display: none;
+  }
+  form:not(.sidebar-exposed-form) .js-form-wrapper .js-form-item {
+    position: relative;
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: white;
+      position: absolute;
+      right: -5px;
+      top: calc(50% - 5px);
+      border-top: 1px solid $bootwood-orange;
+      border-right: 1px solid $bootwood-orange;
+    }
+    .form-textarea-wrapper {
+      border: 1px solid $bootwood-orange;
+      margin-top: 15px;
+      textarea {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        resize: none;
+      }
+    }
+  }
+
+  .field.field--name-field-claim-comment-body {
+    display: inline-block;
+    position: relative;
+    background: white;
+    padding: 10px;
+    > * {
+      color: #6D6D6D;
+      display: inline-block;
+    }
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: white;
+      position: absolute;
+      left: -5px;
+      top: calc(50% - 5px);
+    }
+  }
+  footer p {
+    text-align: center;
+  }
+  .customer {
+    text-align: right;
+    .field.field--name-field-claim-comment-body {
+      background: $bootwood-orange;
+      > * {
+        color: white;
+      }
+      &::after {
+        left: auto;
+        right: -5px;
+        background: $bootwood-orange;
+      }
+    }
+  }
+}
+
+.page-node-type-claim {
+  .form-item .panel-body .entity-browser-iframe-container iframe {
+    z-index: 10;
+  }
+  .ui-dialog {
+    z-index: 99999;
+  }
+}
+
+.node--view-mode-internal-evaluation {
+  margin-bottom: 30px;
+}
+
+.left-space {
+  margin-left: 5px;
+}
+
+form:not(.sidebar-exposed-form) .field--name-field-pictures .panel-danger,
+form:not(.sidebar-exposed-form) .field--name-field-proof .panel-danger{
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  > .panel-heading .panel-title {
+    margin: 0;
+  }
+  .alert-danger {
+    border: none;
+  }
+}

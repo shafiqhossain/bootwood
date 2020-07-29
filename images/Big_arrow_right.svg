@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.732 33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Big_arrow_right" transform="translate(-1758.072 -2021.5)">
+    <g id="Group_70" data-name="Group 70" transform="translate(1758.573 2022)">
+      <g id="Light_70" data-name="Light 70">
+        <path id="Shape_330" data-name="Shape 330" class="cls-1" d="M589.651,428.5l17.5-15.48a.7.7,0,0,0,0-1.041l-17.5-15.48" transform="translate(-589.651 -396.5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

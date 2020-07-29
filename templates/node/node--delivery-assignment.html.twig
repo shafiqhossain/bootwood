@@ -1,0 +1,136 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+  </header>
+
+  <div class="flex-table-checkboxes">
+    {{ content.field_redeliver_goods }}
+    {{ content.field_cover_labor_cost }}
+    {{ content.field_compensation }}
+    {{ content.field_goods_in_return }}
+  </div>
+  <br/><br/>
+
+  {% if node.field_redeliver_goods.value %}
+    <div class="flex-table flex-table-description flex-table-description-top row" role="rowgroup">
+      <div class="form-label flex-row">
+        {{ "Redeliver goods"|t }}
+      </div>
+    </div>
+    <div class="flex-table row row-first" role="rowgroup">
+      {{ content.field_delivery_address }}
+      {{ content.field_delivery_phone }}
+    </div>
+    <div class="flex-table row" role="rowgroup">
+      {{ content.field_information_to_carrier }}
+      {{ content.field_notes }}
+    </div>
+    <div class="flex-table row" role="rowgroup">
+      {{ content.field_delivery_products }}
+    </div>
+    <br/><br/>
+  {% endif %}
+
+
+  {% if node.field_cover_labor_cost.value %}
+    <div class="flex-table flex-table-description flex-table-description-top row" role="rowgroup">
+      <div class="form-label flex-row">
+        {{ "Cover labor costs"|t }}
+      </div>
+    </div>
+    <div class="flex-table row row-first" role="rowgroup">
+      {{ content.field_contractor_address }}
+      <div class="flex-table-rowspan" role="rowgroup">
+        {{ content.field_contractor_phone }}
+        {{ content.field_contractor_email }}
+      </div>
+    </div>
+    <div class="flex-table row" role="rowgroup">
+      {{ content.field_contractor_price }}
+    </div>
+    <div class="flex-table flex-table-description flex-table-description-bottom flex-table-description-half row" role="rowgroup">
+      <div class="flex-row">
+        {{ 'Note! Bootwood is not-toxic and can be delivered to waste as white woodwork. Inovoice must be marked with "CLAIM+claim number".'|t }}
+      </div>
+    </div>
+
+    <br/><br/>
+  {% endif %}
+
+  {% if node.field_compensation.value %}
+    <div class="flex-table row row-first pre-compensation" role="rowgroup">
+
+      {{ content.field_who_bills }}
+
+      {%  if content.field_who_bills['#items'].getString() == 'other' %}
+        {{ content.field_who_bill_bootwood }}
+      {% endif %}
+      {%  if content.field_who_bills['#items'].getString() == 'bootwood' %}
+        {{ content.field_who_bootwood_credit }}
+      {% endif %}
+    </div>
+
+    <br/><br/>
+
+    <div class="flex-table flex-table-description row" role="rowgroup">
+      <div class="form-label flex-row">
+        {{ "Compensation"|t }}
+      </div>
+    </div>
+    <div class="flex-table flex-table-description flex-table-description-bottom flex-table-description-half row" role="rowgroup">
+      <div class="flex-row">
+        {{ "Agreed compensation for additional work/poor quality"|t }}
+      </div>
+      {{ content.field_compensation_sum }}
+    </div>
+    <div class="flex-table row" role="rowgroup">
+      {{ content.field_compensation_bank }}
+    </div>
+
+    <br/><br/>
+  {% endif %}
+
+  {% if node.field_goods_in_return.value %}
+    {% set tableClasses = ['flex-table', 'flex-table-description', 'row'] %}
+    {% if content.field_return_products['#items']|length == 1 %}
+      {% set tableClasses = tableClasses|merge(['flex-table-description-half']) %}
+    {% endif %}
+
+    <div {{ attributes.addClass(tableClasses) }} role="rowgroup">
+      <div class="form-label flex-row">
+          {{ "Return of goods"|t }}
+      </div>
+    </div>
+    <div class="flex-table row" role="rowgroup">
+      {{ content.field_return_products }}
+    </div>
+    <div class="flex-table flex-table-description flex-table-description-bottom flex-table-description-half row" role="rowgroup">
+      <div class="flex-row">
+        {{ 'Return of goods to Bootwood must be in agreement with order department, and clearly marked "CLAIM+claim number". The shipment must be packed properly in order to not impare the quality.'|t }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if delivery_assigment_node %}
+    {{ after_delivery_assigment }}
+  {% endif %}
+
+</article>

@@ -1,0 +1,433 @@
+.path-claim-summary-table {
+
+  p {
+    font-size: inherit;
+  }
+
+  input,
+  select,
+  .chosen-container {
+    border-color: $bootwood-orange;
+    border-radius: 0px;
+    margin: 10px 20px 10px 5px;
+  }
+
+  .select-wrapper:after {
+    color: $bootwood-orange;
+    font-size: 10px;
+    right: 10%;
+
+    @media screen and (min-width: $screen-sm) {
+      right: 5%;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      right: 15%;
+    }
+  }
+
+  button {
+    border-color: $bootwood-orange;
+    background-color: $bootwood-orange;
+    font-weight: bold;
+
+    &.btn-primary {
+      color: white;
+      width: 90%;
+      margin: 10px 20px 20px 5px;
+      display: block;
+      
+      @media screen and (min-width: $screen-xs) {
+        width: 91%;
+      }
+
+      @media screen and (min-width: $screen-sm) {
+        width: 99%;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        width: 15vw;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+
+  .view-filters .form--inline {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $screen-md) {
+      display: block;
+    }
+
+    // each field
+    .js-form-item {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+
+      // field
+      .form-control {
+        background-color: $bootwood-background;
+        width: 90%;
+
+        &:after {
+          content: '\e114';
+          display: inline-block;
+          font-family: 'Glyphicons Halflings';
+        }
+
+        @media screen and (min-width: $screen-xs) {
+          width: 91%;
+        }
+
+        @media screen and (min-width: $screen-sm) {
+          width: 99%;
+        }
+
+        @media screen and (min-width: $screen-md) {
+          width: 15vw;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          width: 8.5vw;
+        }
+
+      }
+
+      .chosen-container {
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        height: auto;
+
+        &::after {
+          color: #f79d19;
+          font-size: 10px;
+          right: 4%;
+          position: absolute;
+          top: calc(50% - 7px);
+        }
+
+        .chosen-choices {
+          background: transparent;
+          border-color: $bootwood-orange;
+          min-height: 34px;
+          padding: 0;
+          li.search-field {
+            height: 100%;
+            width: 100%;
+
+            input {
+              height: 100%;
+              width: 100%;
+              padding: 6px 12px;
+            }
+          }
+
+          .search-choice {
+            margin: 3px;
+          }
+        }
+
+        .chosen-drop {
+          border-color: $bootwood-orange;
+        }
+      }
+    }
+
+    .js-form-type-select {
+      display: flex;
+      flex-direction: column;
+    }
+
+    // search button
+    .form-actions {
+      @media screen and (min-width: $screen-lg) {
+        display: flex;
+        flex-direction: inherit;
+      }
+
+      button {
+        color: white;
+        width: 91%;
+        margin: 32px 0 32px 5px;
+
+        span {
+          &:before {
+            display: none;
+          }
+        }
+
+        @media screen and (min-width: $screen-sm) {
+          width: 99%;
+        }
+
+        @media screen and (min-width: $screen-md) {
+          width: 32vw;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          margin: 32px 0 0 0;
+          width: auto;
+        }
+      }
+    }
+
+    // advanced options
+    #edit-secondary {
+      @media screen and (max-width: $screen-sm) {
+        width: 91%;
+      }
+
+      .panel-heading {
+        margin-top: 22px;
+
+        .panel-title {
+          color: white;
+          border-color: $bootwood-orange;
+          background-color: $bootwood-orange;
+          font-weight: bold;
+          font-size: 16px;
+          margin: 0 -5px 0 5px;
+          padding: 6px 8px;
+          transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;
+
+          &:hover {
+            background-color: #382306;
+            border-color: #382306;
+          }
+
+          @media screen and (min-width: $screen-sm) {
+            margin: 0 0 0 5px;
+          }
+
+          @media screen and (min-width: $screen-md) {
+            margin: 0 15px 0 5px;
+            &[aria-expanded="true"] {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .collapse.in {
+        @media screen and (min-width: $screen-md) {
+          display: flex;
+
+          .form-item {
+            width: 15vw;
+
+            input {
+              margin: 4px 3px;
+            }
+
+            select {
+              margin: 3px;
+            }
+
+            .select-wrapper {
+              width: 99%;
+            }
+          }
+        }
+
+        @media screen and (max-width: $screen-md) {
+          .control-label {
+            width: 100%;
+          }
+        }
+
+        .form-item-field-main-reason-claim-target-id .select-wrapper {
+          &::after {
+            top: 27px;
+
+            @media screen and (min-width: $screen-md) {
+              top: 21px;
+            }
+          }
+
+          &::before {
+            content: '\e114';
+            color: #f79d19;
+            right: calc(1% + 5px);
+            bottom: 23px;
+            position: absolute;
+            font-family: 'Glyphicons Halflings';
+            font-size: 10px;
+            @media screen and (min-width: $screen-sm) {
+              right: calc(5% + 5px);
+            }
+            @media screen and (min-width: $screen-md) {
+              bottom: 16px;
+            }
+          }
+        }
+
+        .form-item-name {
+          margin-right: 3px;
+        }
+
+        input {
+          background-color: $bootwood-background;
+          border: 1px solid $bootwood-orange;
+          width: 100%;
+          margin: 11px 20px 11px 8px;
+          @media screen and (min-width: $screen-sm) {
+            width: 99%;
+          }
+        }
+
+        .form-item-field-who-bill-bootwood-value input {
+          width: 99%;
+          @media screen and (min-width: $screen-sm) {
+            width: 98.5%;
+          }
+        }
+        .select-wrapper {
+          border-color: transparent;
+          .shs-widget-container {
+            width: 100%;
+
+            select {
+              width: 100%;
+              padding: 6px 12px;
+              @media screen and (min-width: $screen-sm) {
+                width: 99%;
+              }
+            }
+          }
+          select {
+            background-color: $bootwood-background;
+            border: 1px solid $bootwood-orange;
+            width: 100%;
+            @media screen and (min-width: $screen-sm) {
+              width: 99%;
+            }
+
+          }
+          .shs-select {
+            height: 34px;
+          }
+          &:hover {
+            border-color: transparent;
+          }
+          &::after {
+            color: $bootwood-orange;
+            right: 1%;
+
+            @media screen and (min-width: $screen-sm) {
+              right: 5%;
+            }
+          }
+          @media screen and (max-width: $screen-md) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // table
+  .view-content .table-responsive {
+    @media screen and (max-width: $screen-lg) {
+      margin-left: 5px;
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 91%;
+    }
+    @media screen and (min-width: $screen-md) {
+      font-size: .75em;
+    }
+
+    .table-striped {
+      @media screen and (min-width: $screen-lg) {
+        margin-left: 5px;
+      }
+
+      thead tr {
+        background-color: $bootwood-orange;
+
+        .views-field {
+          border: 0;
+          color: white;
+          a {
+            color: white;
+            &:hover {
+              color: white;
+            }
+            span {
+              color: white;
+              top: 2px;
+            }
+          }
+        }
+      }
+      .views-field-field-product-group,
+      .views-field-field-main-reason-claim,
+      .views-field-field-year-of-delivery,
+      .views-field-field-who-bill-bootwood,
+      .views-field-field-conversation-with-customer,
+      .views-field-field-claim-type {
+        display: none;
+      }
+
+      tbody {
+        tr {
+          background-color: $bootwood-background;
+
+          .views-field {
+            border: 0;
+
+            a {
+              color: $bootwood-dark-grey;
+            }
+
+            .placeholder {
+              font-style: normal;
+            }
+            article, label, .cke_top, .cke_bottom, .filter-wrapper {
+              display: none;
+            }
+            form {
+              //display: flex;
+              width: 200px;
+              .field--widget-text-textarea {
+                display: inline-block;
+                margin: 0;
+              }
+              .field--widget-string-textfield {
+                margin: 0;
+              }
+              .form-actions button {
+                float: right;
+                margin: 0;
+              }
+            }
+            .form-textarea-wrapper {
+              height: 35px;
+              width: 200px;
+              margin: 0;
+              .cke_contents {
+                height: 31px !important;
+              }
+            }
+          }
+        }
+
+        tr:nth-of-type(even) {
+          background-color: $bootwood-dark-grey-3;
+        }
+      }
+    }
+  }
+
+  .claim-csv {
+    background-image: none;
+    color: $bootwood-orange;
+  }
+}

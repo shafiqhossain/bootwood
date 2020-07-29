@@ -1,0 +1,21 @@
+.path-claim-summary-table{
+  input, select {
+    border-color: $bootwood-orange;
+    border-radius: 0px;
+    margin: 10px 20px 10px 5px;
+  }
+  .select-wrapper:after {
+    color: $bootwood-orange;
+    padding-right: 2.5em;
+  }
+  button {
+    border-color: $bootwood-orange;
+    background-color: $bootwood-orange;
+    font-weight: bold;
+  }
+
+  .claim-csv {
+    background-image: none;
+    color: $bootwood-orange;
+  }
+}

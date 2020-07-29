@@ -1,0 +1,28 @@
+bootwood.xs:
+  label: xs
+  mediaQuery: 'all and (min-width: 0)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+bootwood.sm:
+  label: sm
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+bootwood.md:
+  label: md
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+bootwood.lg:
+  label: lg
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x

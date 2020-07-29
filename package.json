@@ -1,0 +1,32 @@
+{
+  "name": "drupal-bootstrap",
+  "version": "8.3.0-dev",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "cssnano": "^4.1.10",
+    "grunt": "^1.0.4",
+    "grunt-contrib-csslint": "latest",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "latest",
+    "grunt-sass": "^3.0.2",
+    "load-grunt-config": "^1.0.1",
+    "pixrem": "^5.0.0",
+    "time-grunt": "^2.0.0",
+    "node-sass": "latest"
+  },
+  "scripts": {
+    "postinstall": "grunt install"
+  },
+  "caches": {
+    "libraries": ".libraries"
+  },
+  "paths": {
+    "css": "css",
+    "js": "js",
+    "libraries": "lib"
+  },
+  "urls": {
+    "jsdelivr": "https://api.jsdelivr.com/v1/bootstrap/libraries"
+  }
+}

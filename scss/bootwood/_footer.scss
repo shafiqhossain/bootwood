@@ -1,0 +1,226 @@
+.footer.container {
+  width: auto;
+  padding: 0;
+  margin-top: 0;
+  border-top: none;
+  .footer-top {
+    background-color: $bootwood-deep-sea;
+
+    .footer-top-wrapper {
+      padding: 0;
+      color: white;
+      padding-bottom: 30px;
+
+      .bootwood-logo {
+        width: 39px;
+      }
+
+      .footer-column {
+        padding: 40px 15px;
+
+        @media screen and (max-width: $screen-lg) {
+          &:last-child h2 {
+            border-bottom: none;
+          }
+        }
+
+        @media screen and (max-width: $screen-md) {
+          &:last-child {
+            padding: 20px 0;
+          }
+        }
+
+        @media screen and (max-width: $screen-sm) {
+          padding: 20px 0;
+        }
+
+        &:first-child {
+          display: flex;
+
+          @media screen and (max-width: $screen-sm) {
+            display: block;
+          }
+
+          .block-block-content {
+            padding-left: 15px;
+          }
+        }
+
+        .block-block-content {
+          width: 100%;
+        }
+
+        &-logo {
+          padding-left: 0;
+        }
+
+        &-wider-padding {
+          padding-right:86px;
+        }
+
+        &-newsletter {
+          padding-right: 0;
+        }
+
+        &-sas {
+          @media screen and (max-width: $screen-lg) {
+            clear:both;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 16px;
+        margin-top: 9px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $bootwood-grey-2;
+
+        @media screen and (max-width: $screen-sm) {
+          border: none;
+        }
+      }
+
+      a:hover,
+      a:focus {
+        background-color: $bootwood-deep-sea;
+        color: $bootwood-orange;
+      }
+
+      a, p {
+        font-size: 12px;
+        padding: 0;
+        color: $bootwood-grey-2;
+      }
+
+      .newsletter-form {
+        @media screen and (max-width: $screen-lg) {
+          border-top: 1px solid $bootwood-grey-2;
+          text-align: center;
+        }
+
+        .newsletter-info {
+          color: white;
+          padding-bottom: 20px;
+        }
+
+        .form-item-newsletter-mail {
+          margin-bottom: 0;
+        }
+
+        .form-email {
+          background-color: $bootwood-deep-sea;
+          color: white;
+          float: left;
+          width: 50%;
+          border-radius: 0;
+
+          @media screen and (max-width: $screen-lg) {
+            width: 100%;
+          }
+
+          @media screen and (max-width: $screen-md) {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            float: unset;
+          }
+
+          &::placeholder {
+            color: white;
+          }
+
+          &:focus {
+            border-color: $bootwood-dark-grey-2;
+            box-shadow: none;
+          }
+        }
+
+        .btn-primary {
+          background-color: $bootwood-background;
+          border-color: $bootwood-background;
+          font-size: 12px;
+          font-weight: bold;
+          color: $bootwood-deep-sea;
+          padding: 9px 15px 6px;
+          float: left;
+
+          @media screen and (max-width: $screen-lg) {
+            float: unset;
+            padding: 10px 40px 6px;
+          }
+
+          &:hover {
+            color: $bootwood-dark-grey-2;
+            background-color: $bootwood-orange;
+            border-color: $bootwood-orange;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    background-color: $bootwood-deep-sea;
+
+    .footer-border-wrapper {
+      @include flex-align-center();
+      justify-content: space-between;
+      border-top: 1px solid $bootwood-grey-2;
+      padding: 20px 0;
+      float: none;
+      position: relative;
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 10%;
+        border-top: 1px solid $bootwood-grey-2;
+        top: -1px;
+        left: -10%;
+      }
+      &:after {
+        left: unset;
+        right: -10%;
+      }
+    }
+
+    .copyright {
+      color: white;
+      font-size: 1.2rem;
+      opacity: .75;
+    }
+
+    .footer-links-wrapper {
+      @include flex-align-center();
+      justify-content: space-between;
+
+      a {
+        font-size: 18px;
+        padding: 0 15px;
+
+        path {
+          fill: white;
+        }
+
+        &:hover path{
+          fill: $bootwood-grey-2;
+        }
+      }
+    }
+  }
+}
+
+.path-node .footer.container {
+  margin-top: 136px;
+  @media screen and (min-width: $screen-md) {
+    margin-top: 288px;
+  }
+}
+.path-node.page-node-type-project,
+.path-node.page-node-type-product {
+  .footer.container {
+    margin-top: 0;
+  }
+}

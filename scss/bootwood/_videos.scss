@@ -1,0 +1,43 @@
+.page-node-type-page article {
+  .field--name-body {
+    h1 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      img {
+        max-width: 100%;
+        height: auto !important;
+      }
+      a {
+        color: $bootwood-orange;
+        text-decoration: underline;
+      }
+      iframe {
+        max-width: 100%;
+
+        @media screen and (max-width: $screen-xs) {
+          height: 100%;
+        }
+      }
+    }
+    ul p {
+      font-size: 15px !important;
+    }
+  }
+}
+.paragraph--type--two-columns, .paragraph--type--three-columns {
+  display: flex;
+  margin-bottom: 16px;
+}
+

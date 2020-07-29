@@ -1,0 +1,227 @@
+.page-node-type-page {
+  article[data-history-node-id='5131'] {
+    h1:first-child {
+      visibility: hidden;
+    }
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $screen-xs) {
+      column-width: 300px;
+      column-count: 2;
+    }
+
+    .about-item {
+      width: 30%;
+      margin: 0 auto;
+      @media screen and (max-width: $screen-xs) {
+        width: 40%;
+      }
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+      }
+
+      .about-img.news-img {
+        margin-top: -21px;
+      }
+    }
+
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 14px;
+
+      a {
+        color: $bootwood-orange;
+        font-size: $bootwood-p;
+        line-height: 25px;
+        @media screen and (max-width: $screen-sm) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  #block-aboutustitle {
+    color: $bootwood-orange;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    .block-title {
+      font-weight: bold;
+      font-size: 41px;
+    }
+  }
+
+  .about-us-sublink-header {
+    color: $bootwood-brown-dark;
+    font-size: 25px;
+
+    img {
+      width: 35px!important;
+      height: 35px!important;
+      margin-right: 10px;
+    }
+  }
+
+  .about-content {
+    width: 100%;
+    float: left;
+    @media screen and (max-width: $screen-xs) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+
+  .about-csr-content {
+    img {
+      width: 200px!important;
+      height: auto!important;
+    }
+
+    .footprint-img {
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+
+  .about-sidebar {
+    width: 100%;
+    float: right;
+    @media screen and (max-width: $screen-xs) {
+      display: none;
+    }
+
+    p {
+      font-size: 22px;
+
+      @media screen and (max-width: $screen-sm) {
+        font-size: 15px;
+      }
+
+      a {
+        color: $bootwood-orange;
+      }
+
+      img {
+        width: 35px!important;
+        height: 35px!important;
+        margin-right: 15px;
+
+        @media screen and (max-width: $screen-sm) {
+          width: 25px!important;
+          height: 25px!important;
+        }
+      }
+
+      &:last-child {
+        img {
+          height: 43px!important;
+        }
+
+        a:last-child {
+          position: relative;
+          top: 5px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .view-in-the-news {
+    .block-title {
+      margin-left: 5rem;
+    }
+
+    .view-header {
+      position: relative;
+      margin-bottom: 3rem;
+
+      .view-title {
+        margin-left: 5rem;
+        font-size: 40px;
+      }
+
+      .inthenews-img {
+        width: 40px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.well {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 110%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.view-about-us.view-display-id-page_1 {
+  margin-top: 50px;
+  .col {
+    text-align: center;
+    margin-bottom: 45px;
+    a {
+      display: block;
+      color: $bootwood-orange;
+      font-size: $bootwood-p;
+      line-height: 25px;
+      font-weight: 700;
+      @media screen and (max-width: $screen-sm) {
+        font-size: 20px;
+      }
+      img {
+        margin: 0 auto 10px;
+        width: 100px;
+        height: auto;
+      }
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
+
+.block-views-blockabout-us-block-1 {
+  .views-row {
+    margin-bottom: 10px;
+    a {
+      color: $bootwood-orange;
+      font-size: 22px;
+      @media screen and (max-width: $screen-sm) {
+        font-size: 15px;
+      }
+    }
+    .views-field-field-icon {
+      float: left;
+      img {
+        width: 35px !important;
+        height: 35px !important;
+        margin-right: 15px;
+        @media screen and (max-width: $screen-sm) {
+          width: 25px !important;
+          height: 25px !important;
+        }
+      }
+    }
+  }
+}

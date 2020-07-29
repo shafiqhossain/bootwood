@@ -1,0 +1,89 @@
+.newsletter-signup-form {
+
+  width: 50%;
+  margin: 0 auto 500px auto;
+
+  .newsletter-signup-info{
+    color: $bootwood-orange;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 30px 0 30px 0;
+  }
+
+  label{
+    font-size: 11px;
+    font-weight: 200;
+  }
+
+  button {
+    width: 150px;
+    height: 35px;
+    color: white;
+    margin-left: 20px;
+  }
+
+  input {
+    border-radius: 0;
+    &:focus {
+      border-color: $bootwood-orange;
+      box-shadow: none;
+    }
+  }
+  .form-checkbox {
+    visibility: hidden;
+  }
+
+  .form-item-newsletter-signup-terms {
+    label {
+      padding-right: 10px;
+    }
+  }
+
+  input + i:before {
+    width: 17px;
+    height: 15px;
+    content: " ";
+    padding: 0px 3px 15px 2.5px;
+    left: 29px;
+    background-color: white;
+    display: inline-block;
+    margin-left: -29px;
+    position: absolute;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    margin-top: 3px;
+  }
+
+  input:checked + i:before {
+    content: "✔";
+    color: $bootwood-orange;
+    font-size: 11px;
+    position: absolute;
+  }
+
+  .form-required:after{
+    padding-bottom: 10px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 5px 5px;
+  }
+
+  .form-item-newsletter-signup-terms {
+    margin: 25px 0 30px 0;
+    a{
+      color: $bootwood-orange;
+      font-size: 14px;
+    }
+  }
+
+}
+
+@media screen and (min-width: $screen-sm) {
+  .newsletter-signup-form{
+    .newsletter-signup-info{
+      font-size: 55px;
+    }
+  }
+
+}

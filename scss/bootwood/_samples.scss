@@ -1,0 +1,571 @@
+.cart--cart-block {
+  .cart-block--summary {
+    position: absolute;
+    right: 0;
+    display: flex;
+    @media screen and (max-width: $screen-sm) {
+      position: relative;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+      top: 8.7rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    //@media screen and (max-width: $screen-xs) {
+    //  top: 10rem;
+    //}
+
+    .cart-block--link__cart {
+      color: black;
+      //position: absolute;
+      right: 40px;
+      top: 5px;
+      margin-top: 4px;
+      &:hover {
+        color: $bootwood-orange;
+        text-underline: none;
+      }
+    }
+
+    .cart-block--link__expand {
+      color: black;
+      &:hover {
+        color: $bootwood-orange;
+        text-underline: none;
+      }
+
+      .cart-block--summary__count {
+        margin-left: 1rem;
+        background: black;
+        color: orange;
+        border-radius: 20px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 4px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .cart-block--contents {
+    width: 40rem;
+    right: 0;
+    top: 4.5rem;
+    border: 1px solid $bootwood-orange;
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      transform: rotate(-90deg);
+      @media screen and (max-width: $screen-sm) {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        left: 1.2rem;
+      }
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+      top: 11.5rem;
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+      top: 14.5rem;
+    }
+
+    /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+    &:after {
+      top: -20px;
+      left: 37.4rem;
+      border-color: transparent transparent transparent #fff;
+      border-width: 10px;
+      @media screen and (max-width: $screen-sm) {
+        left: 1.2rem;
+        bottom: 36.25rem;
+        top: 0;
+      }
+    }
+
+    /* this border color controlls the outside, thin border */
+    &:before {
+      top: -23px;
+      left: 37.3rem;
+      border-color: transparent transparent transparent $bootwood-orange;
+      border-width: 11px;
+      @media screen and (max-width: $screen-sm) {
+        left: 1.2rem;
+      }
+    }
+
+    .cart-block--contents__items {
+      overflow-y: auto;
+      .table-responsive {
+        margin-bottom: 0;
+        border: none!important;
+      }
+
+      .table {
+        margin-bottom: 0;
+
+        tr {
+          position: relative;
+
+          td {
+            border: none;
+          }
+        }
+
+        .views-field-field-prodno {
+          position: absolute;
+          left: 30%;
+          top: 16%;
+        }
+        .views-field-quantity {
+          font-size: 25px;
+          padding: 30px 15px;
+          color: $bootwood-orange;
+        }
+      }
+
+      tr {
+        background-color: white;
+        border: none;
+      }
+
+      tr:nth-child(1) td {
+        border-top: none
+      }
+    }
+  }
+}
+
+.path-samples {
+
+  //POPUP
+  .alert-success {
+    display: none;
+  }
+
+  .modal-content {
+    @media screen and (max-width: $screen-sm) {
+      width: 100% !important;
+      margin-top: 70%;
+    }
+
+    .modal-header {
+      border: none;
+    }
+
+    .modal-body {
+      .popup-info {
+        margin-top: -3rem;
+        text-align: center;
+      }
+
+      .popup-product {
+        text-align: center;
+        .popup-title {
+          text-decoration: underline;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
+
+        .popup-sku {
+          background-color: $bootwood-orange;
+          width: 6rem;
+          display: block;
+          border-radius: 5px;
+          padding: 5px;
+          color: white;
+          font-weight: bold;
+          margin: 2rem auto;
+        }
+      }
+
+      .popup-cart {
+        text-align: center;
+        color: $bootwood-orange;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .view-sample {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    @media screen and (max-width: $screen-sm) {
+      margin-top: 10rem;
+    }
+
+    .view-header {
+      width: 100%;
+      color: $bootwood-orange;
+      font-size: $bootwood-h2;
+      font-weight: bold;
+      margin-bottom: 5rem;
+      @media screen and (max-width: $screen-sm) {
+        text-align: center;
+        font-size: 20px;
+        margin-top: -10rem;
+      }
+    }
+
+    .view-filters {
+      width: 25%;
+      @media screen and (max-width: $screen-md) {
+        width: 33%;
+      }
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+      }
+
+      .js-form-type-select {
+        width: 100%;
+      }
+
+      .form-radios {
+        display: flex;
+        flex-direction: column;
+        > .form-item:nth-child(1) {
+          display: none;
+        }
+
+        .form-item:nth-child(2) label {
+          background-image: url('../images/samples/bootwoodclear-deck-toronto-cchristopherlawson-lowres1.jpg');
+        }
+
+        .form-item:nth-child(3) label {
+          background-image: url('../images/samples/bootwood-clear-valleyvilla-carches3.jpg');
+        }
+
+        label {
+          color: white;
+          text-transform: uppercase;
+          font-size: 22px;
+          font-weight: bold;
+          text-align: center;
+          background-color: rgba(247, 157, 25, 0.5);
+          height: 12rem;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding: 13% 1rem;
+          margin: 1rem;
+          background-position: center;
+          display: table;
+          &:hover {
+            outline: 7px solid #f79d19;
+            background-color: rgba(247, 157, 25, 0.5);
+            opacity: 0.9;
+          }
+
+          input {
+            display: none;
+          }
+
+          @media screen and (max-width: $screen-sm) {
+            margin: 1rem 0 0 0;
+          }
+          span {
+            position: relative;
+          }
+        }
+
+        input[checked='checked'] + i {
+          outline: 5px solid #f79d19;
+          display: block;
+          width: 100%;
+          height: 85%;
+          position: absolute;
+          left: 10px;
+          top: 11px;
+          background-color: rgba(247, 157, 25, 0.7);
+          &:after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #f79d19;
+            content: '';
+            position: absolute;
+            right: -13px;
+            top: 42%;
+            @media screen and (max-width: $screen-sm) {
+              content: unset;
+            }
+          }
+          @media screen and (max-width: $screen-sm) {
+            height: 92%;
+            left: 0;
+          }
+        }
+      }
+      .form-group {
+        margin: 2rem 0;
+        text-align: center;
+        background: $bootwood-orange;
+        width: 100%;
+
+        a {
+          color: white;
+          text-transform: uppercase;
+          font-size: 25px;
+          font-weight: bold;
+          background-color: rgba(247, 157, 25, 0.5);
+          display: block;
+          height: 12rem;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding: 46px;
+          &:hover {
+            outline: 5px solid #f79d19;
+            background-color: $bootwood-orange;
+            opacity: 0.8;
+          }
+
+          @media screen and (max-width: $screen-sm) {
+            width: 100vw;
+            margin-left: -50vw;
+            left: 50%;
+            position: relative;
+            padding: 40px;
+          }
+        }
+      }
+    }
+
+    .view-content {
+      width: 70%;
+      margin-left: 4rem;
+      margin-top: 6px;
+      @media screen and (max-width: $screen-md) {
+        width: 64%;
+        margin-left: 2rem;
+      }
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+        margin-left: unset;
+      }
+
+      .views-row {
+        display: flex;
+        height: 11rem;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        &:last-child {
+          border-bottom: none;
+        }
+        //margin: 3rem;
+        @media screen and (max-width: $screen-sm) {
+          margin: 3rem 0 9rem;
+        }
+        .views-field-field-product-image {
+          width: 20%;
+          @media screen and (max-width: $screen-sm) {
+            width: 30%;
+            height: 100%;
+          }
+        }
+
+        .views-field-title {
+          margin-left: 10px;
+          @media screen and (max-width: $screen-sm) {
+            width: 65%;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+
+        .views-field-sku {
+          background-color: $bootwood-orange;
+          width: auto;
+          display: block;
+          border-radius: 5px;
+          margin: 1rem 0;
+          padding: 5px 10px;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+          height: 3rem;
+          position: absolute;
+          left: 20%;
+          top: 2rem;
+          margin-left: 10px;
+          @media screen and (max-width: $screen-sm) {
+            position: static;
+            margin-left: 32%;
+            margin-top: -5rem;
+          }
+        }
+
+        .views-field-field-prodno {
+          position: absolute;
+          top: 3rem;
+          left: 20%;
+          background-color: $bootwood-orange;
+          border-radius: 7px;
+          padding: 5px;
+          color: white;
+          font-weight: bold;
+          @media screen and (max-width: $screen-sm) {
+            position: relative;
+            top: -8rem;
+            left: 0;
+          }
+        }
+
+        .views-field-variations {
+          position: absolute;
+          right: 0;
+          top: -15px;
+          @media screen and (max-width: $screen-md) {
+            top: 15px;
+          }
+
+          @media screen and (max-width: $screen-sm) {
+            position: static;
+            width: 100%;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $bootwood-grey;
+          }
+
+          .btn-success {
+            position: relative;
+            background-color: $bootwood-orange;
+            border-color: $bootwood-orange;
+            border-radius: 0;
+            margin-top: 2rem;
+            @media screen and (max-width: $screen-sm) {
+              width: 100%;
+            }
+            &:before {
+              content: "1";
+              display: block;
+              color: white;
+              background-color: orange;
+              padding: 5px 10px;
+              font-size: 18px;
+              position: absolute;
+              left: -30px;
+              top: -1px;
+              height: 34px;
+              &:hover {
+                color: $bootwood-orange;
+                background-color: $bootwood-brown-dark;
+              }
+              @media screen and (max-width: $screen-sm) {
+                left: 0;
+                top: -1px;
+                padding: 5px 20px;
+              }
+            }
+            &:hover {
+              background-color: $bootwood-brown;
+              border-color: $bootwood-brown;
+              color: $bootwood-orange;
+            }
+          }
+          .product-disabled:before {
+            content: 'added';
+            background-color: $bootwood-orange;
+            text-transform: uppercase;
+            width: 10rem;
+            left: -2px;
+            top: -1px;
+            @media screen and (max-width: $screen-sm) {
+              width: 101%;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .l-prefooter-gallery {
+    clear: both;
+    display: block;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    background: url('../images/samples/samples-prefooter.jpg') center center no-repeat;
+    background-size: cover;
+    height: 40rem;
+    margin-bottom: 5rem;
+
+    //background-attachment: fixed;
+    //background-position: center;
+    @media screen and (max-width: $screen-sm) {
+      clear: both;
+      display: block;
+      height: 150px;
+      background-position: 50% 56%;
+      background-size: cover;
+    }
+  }
+}
+
+.canadian-message {
+  margin: 2rem 0 10rem;
+  float: right;
+  width: 70%;
+  @media screen and (max-width: $screen-sm) {
+    width: 100%;
+    margin: 3rem 0 6rem;
+  }
+
+  img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin-right: 16px;
+    border: 5px solid orange;
+    border-radius: 150px;
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+
+  .img-paragraph {
+    @media screen and (max-width: $screen-sm) {
+      width: 40%;
+      float: left;
+      margin-top: 2rem;
+    }
+  }
+
+  .person-details {
+    margin-top: 5rem;
+    @media screen and (max-width: $screen-sm) {
+      width: 55%;
+      float: right;
+      margin-top: 2rem;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    a {
+      color: $bootwood-orange;
+    }
+  }
+}

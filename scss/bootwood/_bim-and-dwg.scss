@@ -1,0 +1,47 @@
+.view-bim-files-of-products,
+.view-dwg-files-of-products {
+  .table-responsive caption {
+    font-size: 42px;
+  }
+  .table > tbody > tr > td {
+
+      padding: 0;
+      a {
+        display: block;
+        position: relative;
+        padding: 8px;
+        color: #777;
+
+        &:hover {
+          color: #f79d19;
+
+          span {
+            color: #f79d19;
+          }
+        }
+
+        &:after {
+          content: '';
+          background: url(../images/download/download_documentation.svg) no-repeat center;
+          height: 14px;
+          width: 16px;
+          position: absolute;
+          background-size: 15px;
+          right: 15px;
+          top: 12px;
+        }
+      }
+    }
+}
+#block-downloadfiles {
+  .block-title {
+    font-size: 24px;
+  }
+  a {
+    font-size: 16px;
+    text-decoration: underline;
+    color: $bootwood-orange;
+    display: block;
+    padding: 0;
+  }
+}

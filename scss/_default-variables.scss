@@ -1,0 +1,79 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             85vw !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            85vw !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      85vw !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+// bootwood-colors
+$bootwood-background: #f7f5f7;
+
+$bootwood-orange: #f79d19;
+$bootwood-brown:  #594338;;
+$bootwood-brown-dark: #382306;
+$bootwood-grey: #f2f2f2;
+$bootwood-dark-grey: #6D6D6D;
+
+//Footer Colors
+$bootwood-deep-sea: #233846;
+$bootwood-grey-2: #a3a1a3;
+$bootwood-dark-grey-2: #4b494b;
+$bootwood-dark-grey-3: #e6e4e6;
+
+$grid-float-breakpoint: 992px;
+
+$bootwood-h1: 50px;
+$bootwood-h2: 40px;
+$bootwood-p: 22px;
+
+// Font that is used everywhere
+$font-primary: 'Sofia Pro Light';
+$primary-font: $font-primary;
+
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+
+//Mixins
+
+@mixin flex-align-center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin orange-hover() {
+  &:hover {
+    color: $bootwood-orange;
+  }
+}
+
+@mixin orange-active() {
+  color: $bootwood-orange;
+  background-color: $bootwood-background;
+}

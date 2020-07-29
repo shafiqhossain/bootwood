@@ -1,0 +1,128 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the individual slick item/slide template.
+ *
+ * Available variables:
+ * - attributes: An array of attributes to apply to the element.
+ * - item.slide: A renderable array of the main image/background.
+ * - item.caption: A renderable array containing caption fields if provided:
+ *   - title: The individual slide title.
+ *   - alt: The core Image field Alt as caption.
+ *   - link: The slide links or buttons.
+ *   - overlay: The image/audio/video overlay, or a nested slick.
+ *   - data: any possible field for more complex data if crazy enough.
+ * - settings: An array containing the given settings.
+ *
+ * @see template_preprocess_slick_slide()
+ */
+#}
+
+{{ attach_library('bootwood/slider_homepage_arrows') }}
+{%
+  set classes = [
+    'slick__slide', 'slide', 'slide--' ~ delta,
+    item.slide is empty ? 'slide--text',
+    settings.layout ? 'slide--caption--' ~ settings.layout|clean_class,
+    settings.class ? settings.class
+  ]
+%}
+{%
+  set content_classes = [
+    settings.detroy ? 'slide',
+    not settings.detroy ? 'slide__content'
+  ]
+%}
+{% set slide %}
+  {% block slick_slide %}
+    {% if settings.split and not settings.unslick %}
+      <div class="slide__media">{{ item.slide }}</div>
+    {% else %}
+      {{ item.slide }}
+    {% endif %}
+  {% endblock %}
+{% endset %}
+
+{% if settings.wrapper %}
+  <div{{ attributes.addClass(classes) }}>
+  {% if settings.grid is empty %}<div{{ content_attributes.addClass(content_classes) }}>{% endif %}
+{% endif %}
+
+  {% if item.slide %}
+    {{ slide }}
+  {% endif %}
+
+  {% if item.caption %}
+    {% block slick_caption %}
+      {% if settings.fullwidth %}<div class="slide__constrained">{% endif %}
+
+        <div class="slide__caption row">
+          {% if item.caption.overlay %}
+            <div class="slide__overlay col-xs-12">
+                {{ item.caption.overlay }}
+                <div class="slider-header">
+                  <p class="sh-line">{{'Natural wood'|t }}</p>
+                  <p class="sh-line">{{'Made to last'|t }}</p>
+                </div>
+            </div>
+            {% if settings.data %}<div class="slide__data">{% endif %}
+          {% endif %}
+
+          {% if item.caption.alt %}
+            <p class="slide__description">{{ item.caption.alt }}</p>
+          {% endif %}
+            <div class="slide-info-wrapper row col-xs-12">
+              <div class="slide-text-wrapper row col-xs-12 col-md-10 col-lg-8">
+                <div class="col-xs-1 hidden-xs hidden-sm">
+                  <div class="slider-project">{{ 'Project'|t }}:</div>
+                  <div class="slider-counter">
+                    <span class="slider-counter-current">{{ item.caption.data.counter }}</span>
+                    <span class="slider-counter-total">{{ item.caption.data.total_count }}</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4 hp-slider-project-text">
+                  <div class="slider-project visible-xs-block visible-sm-block">{{ 'Project'|t }}:</div>
+                  {% if item.caption.title %}
+                    <h3 class="slide__title">{{ item.caption.title }}</h3>
+                  {% endif %}
+                  <div class="hp-project-type hidden-xs hidden-sm">{{ item.caption.data.field_project_type }}</div>
+                  <div class="hp-slider-read-more">{{ item.caption.data.view_node_1 }}</div>
+                </div>
+                  {% if item.caption.data.product_title %}
+                  <div class="col-md-4 hidden-xs hidden-sm hp-slider-product-text">
+                    <h3 class="slide__title">{{ item.caption.data.product_title }}</h3>
+                    {{ item.caption.data.product_application }}
+                    {{ item.caption.data.product_link }}
+                  </div>
+                  {% endif %}
+                  {% if item.caption.data.product_image %}
+                  <div class="col-md-3 hp-slider-product-image hidden-xs hidden-sm">
+                    {{ item.caption.data.product_image }}
+                  </div>
+                  {% endif %}
+              </div>
+              <nav class="slick__arrow">
+                <div class="hp-arrow col-md-2 arrow-left">
+                  <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" tabindex="0" role="button"></button>
+                </div>
+                <div class="hp-arrow col-md-2 arrow-right">
+                  <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" tabindex="0" role="button"></button>
+                </div>
+              </nav>
+            </div>
+
+                {% if item.caption.link %}
+                  <div class="slide__link">{{ item.caption.link }}</div>
+                {% endif %}
+
+          {% if item.caption.overlay and settings.data %}</div>{% endif %}
+        </div>
+
+      {% if settings.fullwidth %}</div>{% endif %}
+    {% endblock %}
+  {% endif %}
+
+{% if settings.wrapper %}
+  {% if settings.grid is empty %}</div>{% endif %}
+  </div>
+{% endif %}

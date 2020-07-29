@@ -1,0 +1,66 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        {{ label }}{{ ' - ' }}{{ 'Final conclusion'|t }}
+      </h2>
+    {{ title_suffix }}
+  </header>
+
+  <div class="flex-table flex-table-no-top-description row row-first" role="rowgroup">
+    {{ content.field_customer_feedback_number }}
+    {{ content.field_name }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+    {{ content.field_last_name }}
+    {{ content.field_installation_address }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+    {{ content.field_phone_number }}
+    {{ content.field_email }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+    {{ content.field_date_of_registration }}
+    {{ content.field_date_of_inspection_evaluat }}
+  </div>
+
+
+  <br/><br/>
+
+  {{ content.field_pictures }}
+
+  <br/><br/>
+
+  <div class="flex-table flex-table-no-top-description row row-first" role="rowgroup">
+    {{ content.field_description_of_the_issue }}
+    {{ content.field_main_fault }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+    {{ content.field_recommended_solution }}
+    {{ content.field_conclusion }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+    {{ content.field_bootwood_contact }}
+  </div>
+
+  <br/><br/>
+
+  <a class="btn btn-primary" href="/node/{{ node.id }}/edit/final-conclusion?destination=/claims/{{ node.id }}/final-conclusion">Edit</a>
+
+  {% if final_conclusion_node %}
+    {{ acceptance_form }}
+  {% endif %}
+
+</article>

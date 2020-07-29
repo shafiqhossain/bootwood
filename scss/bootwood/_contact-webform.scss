@@ -1,0 +1,380 @@
+.block-webform {
+  //height: 870px;
+  margin-top: 100px;
+  h2 {
+    text-align: center;
+    font-size: $bootwood-h2;
+    color: $bootwood-brown-dark;
+    margin-bottom: 100px;
+    @media screen and (max-width: $screen-xs) {
+      font-size: 35px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.webform-submission-contact-form {
+  background: url("../images/contact-webform/contact-background.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  //PARALAX
+  background-attachment: fixed;
+  background-position: center;
+
+  .form-item {
+    width: 30%;
+    margin: 20px auto;
+    @media screen and (max-width: $screen-md) {
+      width: 50%;
+    }
+    @media screen and (max-width: $screen-xs) {
+      width: 80%;
+    }
+  }
+
+  input.form-text,
+  input.form-email {
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    &::placeholder {
+      color: $bootwood-brown-dark;
+    }
+  }
+
+  .form-item-company {
+    padding-top: 50px;
+  }
+
+  .form-textarea-wrapper {
+    margin: 10px 0;
+    width: 100%;
+
+    .form-textarea {
+      border-radius: 0;
+
+      &::placeholder {
+        color: $bootwood-brown-dark;
+      }
+    }
+  }
+
+  .form-type-checkbox {
+    height: 20px;
+    margin-bottom: 4rem;
+
+    .description {
+      position: relative;
+      top: -3rem;
+      padding-left: 5rem;
+      color: white;
+
+      .webform-element-description {
+        padding: 7px;
+        background-color: white;
+        text-align: center;
+        color: black;
+      }
+    }
+  }
+
+  .form-item-terms-of-use {
+    margin-bottom: 7rem;
+    @media screen and (max-width: $screen-lg) {
+      margin-bottom: 8rem;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  .form-item-newsletter .help-block {
+      margin-top: 1px;
+  }
+
+  label[title="Terms of use"],
+  label[for="edit-newsletter"]{
+    &:after {
+      margin-left: 15px;
+      background-repeat: no-repeat;
+      height: 15px;
+    }
+
+
+    input {
+      visibility: hidden;
+    }
+
+    input + i:before {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      content: "";
+      display: inline-block;
+      border-radius: 1px;
+      margin-left: -20px;
+      position: absolute;
+      margin-top: -4px;
+      z-index: 1;
+    }
+
+    input:checked + i:before {
+      content: "✔";
+      font-size: 20px;
+      color: $bootwood-brown-dark;
+      padding: 1px 6px;
+      position: absolute;
+    }
+  }
+
+  .webform-actions {
+    text-align: center;
+    padding-bottom: 50px;
+
+    .form-submit {
+      height: 50px;
+      min-width: 140px;
+      width: 30%;
+      margin: 20px auto;
+      @media screen and (max-width: $screen-md) {
+        width: 50%;
+      }
+      @media screen and (max-width: $screen-xs) {
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+.webform-confirmation {
+  .webform-confirmation__message {
+    text-align: center;
+    color: $bootwood-orange;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10rem;
+  }
+
+  .fa-check-circle {
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: $bootwood-orange;
+    margin: 5rem auto;
+  }
+
+  .webform-confirmation__back {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    a {
+      color: $bootwood-orange;
+    }
+  }
+}
+
+
+//PATH CONTACT WEBFORM
+@media screen and (max-width: $screen-xs) {
+  .path-webform,
+  .page-node-type-webform {
+    .ctc-column {
+      display: none;
+    }
+
+    .ctc-column.open {
+      display: block;
+    }
+  }
+}
+
+
+.path-webform,
+.page-node-type-webform {
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .contact-webform-title {
+    text-align: center;
+    color: $bootwood-orange;
+    margin: 3rem 0 6rem;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  .webform-submission-form {
+    input,
+    textarea {
+      border: 1px solid $bootwood-orange;
+      border-radius: 0;
+      color: black;
+      width: 50%;
+      //margin: 0 auto;
+      @media screen and (max-width: $screen-sm) {
+        width: 90%;
+      }
+
+      &::placeholder {
+        color: black;
+      }
+    }
+
+    .select-wrapper {
+      width: 50%;
+      //margin: 0 auto;
+      display: block;
+      &:after {
+        color: black;
+      }
+      @media screen and (max-width: $screen-sm) {
+        width: 90%;
+      }
+      select {
+        border: 1px solid $bootwood-orange;
+        border-radius: 0;
+        color: black;
+        padding-left: 8px;
+      }
+    }
+
+    .webform-button--submit {
+      display: block;
+      width: 25%;
+      margin-left: 25%;
+      color: white;
+      margin-bottom: 10rem;
+      margin-top: 2%;
+      @media screen and (max-width: $screen-sm) {
+        width: 90%;
+        margin: 0 auto 5rem;
+      }
+    }
+  }
+}
+
+// Employees view
+.view-employees.view-display-id-block_1 {
+  .view-content {
+
+    .cols-3 {
+      margin-left: 2rem;
+      //font-weight: bold;
+      font-size: 14px;
+      color: $bootwood-brown-dark;
+      margin-top: 2rem;
+      @media screen and (max-width: $screen-xs) {
+        display: none;
+        color: black;
+        font-size: 14px;
+      }
+    }
+
+    .cols-3.open {
+      @media screen and (max-width: $screen-xs) {
+        display: block;
+      }
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 40px;
+      color: $bootwood-brown-dark;
+      margin-bottom: 5rem;
+      margin-left: 2rem;
+      @media screen and (max-width: $screen-xs) {
+        font-size: 24px;
+      }
+    }
+
+    .views-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 5rem;
+      @media screen and (max-width: $screen-sm) {
+        margin-bottom: 0;
+      }
+
+      .views-col {
+        padding: 0 5rem;
+        width: 30%;
+        background: url('../images/contact-webform/home-var-solid-bootwood.png') no-repeat;
+        background-size: 20px;
+        background-position-x: 23px;
+        background-position-y: 2px;
+        @media screen and (max-width: $screen-sm) {
+          width: 100%!important;
+          margin: 0 auto;
+        }
+        @media screen and (max-width: $screen-sm) {
+          padding: 0 0 3rem 3rem;
+          background-position-x: 0;
+        }
+
+        .views-field-field-name-employee {
+          display: block;
+        }
+
+        .views-field-field-phone-direct a {
+          color: $bootwood-orange;
+          @media screen and (max-width: $screen-xs) {
+            padding-left: 0;
+          }
+        }
+        .views-field-field-email a{
+          color: $bootwood-orange;
+          @media screen and (max-width: $screen-xs) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+ // Contact
+.webform-submission-form {
+  .js-form-item-privacy-policy {
+    width: 50%;
+    //margin: 0 auto;
+    @media screen and (max-width: $screen-sm) {
+     width: 90%;     
+    }
+    .js-form-required i::before {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      content: "";
+      display: inline-block;
+      border-radius: 5px;
+      margin-left: -17px;
+      position: absolute;
+      border: 1px solid #f79d19;
+    }
+    .js-form-required input:checked + i:before {
+      content: "✔";
+      font-size: 13px;
+      color: $bootwood-orange;
+      padding: 0px 3px;
+      position: absolute;
+    }
+    .form-required {
+      &::after {
+        margin: 0 3px 10px 11px!important;  
+      }
+      .form-checkbox {
+        // width: 3%; 
+        visibility: hidden;
+      }  
+    }
+    .help-block {
+      .form-group {
+        margin: -30px 50px 5px;
+      }
+    }
+  }
+}

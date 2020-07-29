@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="search_icon" transform="translate(-230 -3542)">
+    <g id="Group_365" data-name="Group 365" transform="translate(230.5 3542.5)">
+      <g id="search-1">
+        <path id="Oval_280" data-name="Oval 280" class="cls-1" d="M237.457,3556.413a6.957,6.957,0,1,0-6.957-6.957A6.956,6.956,0,0,0,237.457,3556.413Z" transform="translate(-230.5 -3542.5)"/>
+        <path id="Shape_1861" data-name="Shape 1861" class="cls-1" d="M251.7,3563.695l-4.125-4.125" transform="translate(-235.696 -3547.695)"/>
+      </g>
+    </g>
+  </g>
+</svg>

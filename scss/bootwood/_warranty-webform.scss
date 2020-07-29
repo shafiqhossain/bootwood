@@ -1,0 +1,902 @@
+.btn-primary:active {
+  background-color: $bootwood-orange!important;
+  border-color: $bootwood-orange!important;
+}
+
+@media screen and (max-width: $screen-xs) {
+  .page-node-type-webform {
+    .chosen-choices {
+      padding-left: 0;
+
+      .search-choice {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.page-node-type-webform,
+.path-checkout {
+
+  .webform-node-title {
+    color: $bootwood-orange;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .field--name-body {
+    width: 58%;
+    margin: 0 auto;
+    font-size: 18px;
+    @media screen and (max-width: $screen-sm) {
+      width: 62%;
+    }
+    @media screen and (max-width: $screen-xs) {
+      width: 92%;
+    }
+
+    a {
+      color: $bootwood-orange;
+    }
+  }
+  .field--name-field-webform {
+    font-size: 16px;
+  }
+  .block-webform {
+    margin-top: 0;
+
+    .block-title {
+      display: none;
+    }
+  }
+
+  .js-form-wrapper {
+    border: none;
+    box-shadow: none;
+    .panel-heading {
+      border: none;
+      width: 60%;
+      margin: 0 auto;
+      display: block;
+      padding: auto 0;
+      @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+        width: 58%;
+      }
+      @media screen and (max-width: $screen-sm) {
+        width: 62%;
+      }
+      @media screen and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+
+    .panel-title {
+      font-size: 30px;
+      color: $bootwood-brown-dark;
+      padding: 10px 8px;
+      @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+        padding: 10px 0px;
+      }
+      @media screen and (max-width: $screen-sm) {
+        padding: 10px 0px;
+      }
+      @media screen and (max-width: $screen-xs) {
+        text-align: center;
+      }
+    }
+
+    .address--wrapper .panel-heading,
+    .address--wrapper .panel-title {
+      display: none;
+    }
+
+    .address--wrapper .select-wrapper:after {
+      top: 18px;
+    }
+
+    .input-group {
+      width: 100%;
+    }
+
+    .input-group-addon {
+      display: none;
+    }
+
+    .select-wrapper:after {
+      top: 50%;
+    }
+    .form-item-newsletter {
+      .control-label {
+        width: 646px;
+        @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+          width: 57.8%!important;
+        }
+        @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+          width: 57%!important;
+        }
+        @media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
+          width: 62%!important;
+        }
+        @media screen and (max-width: $screen-xs) {
+          width: 95%!important;
+        }
+      }
+    }
+    .js-form-item-newsletter {
+      margin-top: -2px;
+      margin-right: 1px;
+      .control-label {
+        width: 58%;
+        input + i:before {
+          margin-left: -17px;
+          @media screen and (max-width: $screen-lg) and (min-width: $screen-sm) {
+            margin-left: -25px;
+          }
+          @media screen and (max-width: $screen-sm) and (min-width: 600px) {
+            margin-left: -25px;
+          }
+          @media screen and (max-width: 599px) and (min-width: $screen-xs) {
+            margin-left: -22px;
+          }
+          @media screen and (max-width: $screen-xs) and (min-width: 351px) {
+            margin-left: -24px;
+          }
+          @media screen and (max-width: 350px) {
+            margin-left: -22px;
+          }
+        }
+      }
+    }
+    .address--wrapper .panel-body {
+      padding: 15px 0;
+    }
+    .js-form-item {
+      .control-label, legend, input {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        @media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
+          width: 65%;
+        }
+        @media screen and (max-width: $screen-xs) {
+          width: 100%;
+        }
+        &:focus {
+          outline-color: $bootwood-orange;
+        }
+      }
+
+
+      .option {
+        padding-left: 30px;
+      }
+
+      select, textarea {
+        border: none;
+        box-shadow: none;
+      }
+
+      .form-textarea-wrapper:hover,
+      .select-wrapper:hover {
+        border: 1px solid $bootwood-orange;
+      }
+
+      .country.form-select {
+        border: 1px solid $bootwood-grey;
+        border-radius: 0;
+
+        &:hover {
+          border: 1px solid $bootwood-orange;
+        }
+      }
+
+      .select-wrapper,
+      input,
+      .form-tel,
+      .form-textarea-wrapper,
+      .form-select[multiple="multiple"] {
+        border: 1px solid $bootwood-grey;
+        border-radius: 0;
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+          border-color: $bootwood-orange;
+        }
+        &:after {
+          color: black;
+        }
+        @media screen and (max-width: $screen-sm) {
+          width: 65%;
+        }
+        @media screen and (max-width: $screen-xs) {
+          width: 100%;
+        }
+      }
+
+      .form-item-address-country-code .select-wrapper {
+        border: none;
+      }
+
+      .select-wrapper b[role='presentation']{
+        display: none;
+      }
+
+      select:active {
+        border-color: $bootwood-orange;
+      }
+
+      label[for='edit-terms-and-conditions'] {
+        padding-left: 30px;
+      }
+
+      .description {
+        width: 55%;
+        margin: 0 auto;
+        @media screen and (max-width: $screen-xs) {
+          width: 85%;
+        }
+        a {
+          color: $bootwood-orange;
+        }
+      }
+
+      .help-block {
+        width: 52%;
+        margin: -20px auto 0;
+        @media screen and (max-width: $screen-lg) {
+          width: 50%;
+        }
+        @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+          width: 48%;
+        }
+        @media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
+          width: 45%;
+        }
+        @media screen and (max-width: $screen-xs) {
+          width: 70%;
+          margin-top: -20px;
+        }
+        a {
+          color: $bootwood-orange;
+        }
+      }
+
+      .form-radio, .form-checkbox {
+        visibility: hidden;
+      }
+
+      input + i:before {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        content: "";
+        display: inline-block;
+        border-radius: 5px;
+        margin-left: -27px;
+        position: absolute;
+        border: 1px solid $bootwood-orange;
+
+        @media screen and (max-width: $screen-lg) {
+          margin-left: -25px;
+        }
+      }
+
+      input:checked + i:before {
+        content: "✔";
+        font-size: 13px;
+        color: $bootwood-orange;
+        padding: 0px 3px;
+        position: absolute;
+      }
+
+      input[class="form-radio"] + i:before {
+        border-radius: 15px;
+      }
+      input[class="form-radio"]:checked + i:before {
+        //background: url(/sites/all/themes/bootwood/images/circle-checked.svg) center center transparent no-repeat;
+      }
+
+      .form-managed-file {
+        position: relative;
+
+        .file-btn {
+          position: absolute;
+          left: 20.9%;
+          display: block;
+          width: 9.7rem;
+          top: 1.1rem;
+          height: 2.8rem;
+          background-color: $bootwood-orange;
+          border: none;
+          pointer-events: none;
+          color: white;
+          @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+            left: 21.3%;
+            width: 9.9rem;
+          }
+          @media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
+            left: 18.7%;
+            width: 9.9rem;
+
+          }
+          @media screen and (max-width: $screen-xs) {
+            left: 2.7%;
+          }
+          &:hover {
+            background-color: $bootwood-brown;
+            color: $bootwood-orange;
+          }
+        }
+
+        .form-file {
+          z-index: 2;
+          height: 5rem;
+          padding: 13px;
+        }
+      }
+    }
+
+    .form-required:after {
+      position: relative;
+      margin-bottom: 5px;
+      height: 8px;
+      width: 8px;
+      background-size: 8px 8px;
+      transform: scale(0.7);
+    }
+
+    .form-item-terms-and-conditions-30 label:after {
+      display: none;
+    }
+
+    .webform-button--submit {
+      display: block;
+      margin: 0 auto 10rem;
+
+    }
+
+    .chosen-container-active {
+      border: 1px solid $bootwood-orange;
+      box-shadow: none;
+
+      .chosen-choices  {
+        border: 1px solid $bootwood-orange;
+      }
+    }
+
+    .chosen-container {
+      width: 60%!important;
+      margin: 0 auto;
+      display: block!important;
+      @media screen and (max-width: $screen-sm) {
+        width: 65%!important;
+      }
+      @media screen and (max-width: $screen-xs) {
+        width: 100%!important;
+      }
+
+      .chosen-choices {
+        border: 1px solid $bootwood-grey;
+        background-image: none;
+        &:hover {
+          border: 1px solid $bootwood-orange;
+        }
+      }
+
+      .chosen-search-input:hover,
+      .chosen-search-input:active,
+      .chosen-search-input:focus  {
+        border: 1px solid $bootwood-orange;
+      }
+    }
+
+    .select2-container[data-select2-id="50"],
+    .select2-container {
+      width: 60%!important;
+      margin: 0 auto;
+      display: block;
+      @media screen and (max-width: $screen-xs) {
+        width: 90%!important;
+      }
+    }
+
+    .select2-results__option--highlighted{
+      background-color: $bootwood-orange!important;
+    }
+
+    .select2-container--below {
+      width: 60% !important;
+      margin: 0 auto;
+      display: block;
+      @media screen and (max-width: $screen-xs) {
+        width: 90% !important;
+      }
+    }
+
+    .select2-container--above {
+      width: 100%!important;
+      margin: 0 auto;
+      display: block;
+      @media screen and (max-width: $screen-xs) {
+        width: 90%!important;
+      }
+    }
+
+    .select2-search__field {
+      border: none;
+    }
+
+    .select2-selection__choice {
+      white-space: normal;
+      background-color: $bootwood-orange!important;
+    }
+
+    .select2-selection__choice__remove {
+      color: black;
+    }
+
+    .select-wrapper > .select2 {
+      width: 100%!important;
+    }
+
+    .select2-selection {
+      border-radius: 0;
+      border-color: $bootwood-grey;
+    }
+
+
+    li {
+      list-style-type: none;
+      width: 100% !important;
+      .default {
+        width: 100% !important;
+      }
+    }
+
+    .search-choice {
+      position: relative!important;
+      background-color: $bootwood-orange!important;
+      padding: 10px!important;
+      border-radius: 5px!important;
+      background-image: none!important;
+      .search-choice-close {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        right: 0;
+        top: 5px;
+        &:after {
+          position: absolute;
+          content: 'x';
+          color: black;
+          padding-left: 11px;
+          top: 4px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .search-field input {
+      width: 100% !important;
+      margin: 2rem 0 2rem -1.3rem;
+      padding-left: 2rem;
+    }
+
+    .chosen-results {
+      overflow-y: scroll;
+      height: 8rem;
+      display: none;
+      @media screen and (max-width: $screen-md) {
+        height: 20rem;
+      }
+      li {
+        padding: 5px 0;
+      }
+
+      .highlighted {
+        background-color: $bootwood-orange!important;
+        background-image: none;
+      }
+    }
+  }
+
+  .chosen-container-active .chosen-results {
+    display: block;
+  }
+
+  .columns .chosen-container, .column .chosen-container {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+}
+
+.select2-results__option--highlighted{
+  background-color: $bootwood-orange!important;
+}
+
+.address-container-inline {
+  .form-item {
+    display: block !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+form:not(.sidebar-exposed-form) {
+
+  .js-form-wrapper {
+    border: none;
+    box-shadow: none;
+
+    .panel-heading {
+      border: none;
+      display: block;
+    }
+
+    .panel-title {
+      font-size: 30px;
+      color: $bootwood-brown-dark;
+      padding: 10px 8px;
+    }
+
+    .address--wrapper .panel-heading,
+    .address--wrapper .panel-title {
+      display: none;
+    }
+
+    .address--wrapper .select-wrapper:after {
+      top: 18px;
+    }
+
+    .input-group-addon {
+      display: none;
+    }
+
+
+    .address--wrapper .panel-body {
+      padding: 15px 0;
+    }
+
+    .js-form-item {
+      .control-label, legend, input {
+        margin: 0 auto;
+        display: block;
+
+        &:focus {
+          outline-color: $bootwood-orange;
+        }
+      }
+
+
+      .option {
+        padding-left: 30px;
+      }
+
+      select, textarea {
+        border: none;
+        box-shadow: none;
+      }
+
+      .form-textarea-wrapper:hover,
+      .select-wrapper:hover {
+        border: 1px solid $bootwood-orange;
+      }
+
+      .country.form-select {
+        border: 1px solid $bootwood-grey;
+        border-radius: 0;
+
+        &:hover {
+          border: 1px solid $bootwood-orange;
+        }
+      }
+
+      .select-wrapper,
+      input,
+      .form-textarea-wrapper,
+      .form-select[multiple="multiple"] {
+        border: 1px solid $bootwood-grey;
+        border-radius: 0;
+        margin: 0 auto;
+        display: block;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+          border-color: $bootwood-orange;
+        }
+
+        &:after {
+          color: black;
+        }
+
+      }
+
+      .form-item-address-country-code .select-wrapper {
+        border: none;
+      }
+
+      .select-wrapper b[role='presentation'] {
+        display: none;
+      }
+
+      select:active {
+        border-color: $bootwood-orange;
+      }
+
+      label[for='edit-terms-and-conditions'] {
+        padding-left: 30px;
+      }
+
+      .description {
+        margin: 0 auto;
+
+        a {
+          color: $bootwood-orange;
+        }
+      }
+
+      .help-block {
+        margin: -20px auto 0;
+
+        a {
+          color: $bootwood-orange;
+        } 
+      }
+
+      .form-radio, .form-checkbox {
+        opacity: 0;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+      }
+
+      input + i:before {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        content: "";
+        display: inline-block;
+        border-radius: 5px;
+        margin-left: -27px;
+        position: absolute;
+        border: 1px solid $bootwood-orange;
+
+        @media screen and (max-width: $screen-lg) {
+          margin-left: -25px;
+        }
+      }
+
+      input:checked + i:before {
+        content: "✔";
+        font-size: 13px;
+        color: $bootwood-orange;
+        padding: 0px 3px;
+        position: absolute;
+      }
+
+      input[class="form-radio"] + i:before {
+        border-radius: 15px;
+      }
+
+      .form-managed-file {
+        position: relative;
+
+        .file-btn {
+          position: absolute;
+          left: 20.9%;
+          display: block;
+          width: 9.7rem;
+          top: 1.1rem;
+          height: 2.8rem;
+          background-color: $bootwood-orange;
+          border: none;
+          pointer-events: none;
+          color: white;
+          @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+            left: 21.3%;
+            width: 9.9rem;
+          }
+          @media screen and (max-width: $screen-sm) and (min-width: $screen-xs) {
+            left: 18.7%;
+            width: 9.9rem;
+
+          }
+          @media screen and (max-width: $screen-xs) {
+            left: 2.7%;
+          }
+
+          &:hover {
+            background-color: $bootwood-brown;
+            color: $bootwood-orange;
+          }
+        }
+
+        .form-file {
+          z-index: 2;
+          height: 5rem;
+          padding: 13px;
+        }
+      }
+    }
+
+    .form-required:after {
+      position: relative;
+      margin-bottom: 5px;
+      height: 8px;
+      width: 8px;
+      background-size: 8px 8px;
+      transform: scale(0.7);
+    }
+
+    .form-item-terms-and-conditions-30 label:after {
+      display: none;
+    }
+
+    .webform-button--submit {
+      display: block;
+      margin: 2% 10px 100px 0;
+      //margin: 0 auto 10rem;
+
+    }
+
+    .chosen-container-active {
+      border: 1px solid $bootwood-orange;
+      box-shadow: none;
+
+      .chosen-choices {
+        border: 1px solid $bootwood-orange;
+      }
+    }
+
+    .chosen-container {
+      margin: 0 auto;
+      display: block !important;
+
+      .chosen-choices {
+        border: 1px solid $bootwood-grey;
+        background-image: none;
+
+        &:hover {
+          border: 1px solid $bootwood-orange;
+        }
+      }
+
+      .chosen-search-input:hover,
+      .chosen-search-input:active,
+      .chosen-search-input:focus {
+        border: 1px solid $bootwood-orange;
+      }
+    }
+
+    .select2-container[data-select2-id="50"],
+    .select2-container {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .select2-results__option--highlighted {
+      background-color: $bootwood-orange !important;
+    }
+
+    .select2-container--below {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .select2-container--above {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .select2-search__field {
+      border: none;
+    }
+
+    .select2-selection__choice {
+      white-space: normal;
+      background-color: $bootwood-orange !important;
+    }
+
+    .select2-selection__choice__remove {
+      color: black;
+    }
+
+
+    .select2-selection {
+      border-radius: 0;
+      border-color: $bootwood-grey;
+    }
+
+
+    li {
+      list-style-type: none;
+    }
+
+    .search-choice {
+      position: relative !important;
+      background-color: $bootwood-orange !important;
+      padding: 10px !important;
+      border-radius: 5px !important;
+      background-image: none !important;
+
+      .search-choice-close {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        right: 0;
+        top: 5px;
+
+        &:after {
+          position: absolute;
+          content: 'x';
+          color: black;
+          padding-left: 11px;
+          top: 4px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .search-field input {
+      width: 100% !important;
+      margin: 2rem 0 2rem -1.3rem;
+      padding-left: 2rem;
+    }
+
+    .chosen-results {
+      overflow-y: scroll;
+      height: 8rem;
+      display: none;
+      @media screen and (max-width: $screen-md) {
+        height: 20rem;
+      }
+
+      li {
+        padding: 5px 0;
+      }
+
+      .highlighted {
+        background-color: $bootwood-orange !important;
+        background-image: none;
+      }
+    }
+  }
+
+  .form-inline .form-control {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    .panel-heading, .panel-body {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .input-group .form-control {
+    float: none;
+  }
+
+  .chosen-container-active .chosen-results {
+    display: block;
+  }
+
+  .columns .chosen-container, .column .chosen-container {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+}
+
+.form-item-field-installation-address-0-address-country-code {
+  margin-bottom: 0;
+}

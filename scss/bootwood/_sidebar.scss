@@ -1,0 +1,171 @@
+/*----------------------*\
+    Views exposed form
+\*----------------------*/
+.main-container aside {
+  position: static;
+}
+
+.region-sidebar-first {
+  @media screen and (max-width: $screen-xs) {
+    position: static!important;
+  }
+  &.stick-to-footer {
+    bottom: 10px;
+  }
+  .views-exposed-form {
+    #filters-mobile-header {
+      @media screen and (min-width: $screen-sm) {
+        display: none;
+      }
+      cursor: pointer;
+      span {
+        line-height: 20px;
+      }
+      img {
+        width: 20px;
+        margin-left: 20px;
+      }
+    }
+    form {
+      display: none;
+      @media screen and (min-width: $screen-sm) {
+        display: block!important;
+      }
+    }
+    .form--inline {
+      font-family: $primary-font;
+      color: $bootwood-dark-grey;
+
+      .button.js-form-submit.form-submit.btn-primary.btn.icon-before {
+        background-color: transparent;
+        border: unset;
+        color: $bootwood-orange;
+        font-size: 13px;
+        text-transform: capitalize;
+        padding: 0;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        .icon.glyphicon.glyphicon-filter {
+          display: none;
+        }
+      }
+
+      .control-label-option {
+        margin: 5px 0;
+      }
+
+      .form-composite legend {
+        font-size: 24px;
+        color: $bootwood-dark-grey;
+        font-weight: 300;
+      }
+
+      .js-form-type-checkbox {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .fieldgroup.form-wrapper {
+        float: unset;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    .form-type-textfield {
+      clear: both;
+      display: block;
+      margin-top: 45px;
+      width: 100%;
+
+      .form-control {
+        width: 100%;
+      }
+    }
+
+    .form-checkbox {
+      display: none;
+    }
+
+    input + i:before {
+      width: 15px;
+      height: 15px;
+      content: "";
+      display: inline-block;
+      border-radius: 10px;
+      border: 1px solid $bootwood-dark-grey;
+      margin-top: 4px;
+    }
+
+    input:checked + i:before {
+      background-color: $bootwood-orange;
+      border-color: $bootwood-orange
+    }
+  }
+}
+
+/*----------------------*\
+    Get an offer block
+\*----------------------*/
+.region-sidebar-first #block-getanoffer {
+  margin-top: 16px;
+
+  .products-banner-wrapper {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .products-banner-btn {
+      position: absolute;
+      color: white;
+      top: calc(50% - 20px);
+      height: 40px;
+      line-height: 40px;
+      border: none;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      text-decoration: none;
+
+      @media screen and (max-width: $screen-md) {
+        top: calc(50% - 14px);
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: $screen-sm) {
+        top: calc(50% - 15px);
+        height: 30px;
+        line-height: 30px;
+      }
+
+      @media screen and (max-width: $screen-xs) {
+        top: calc(50% - 30px);
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+  }
+}
+
+/*---------------------------------------------*\
+    Ausschreibungstexte finden Sie hier block
+    (German products page)
+\*---------------------------------------------*/
+.region-sidebar-first #block-ausschreibungstextefindensiehier {
+  text-align: center;
+
+  a {
+    color: #000;
+  }
+}

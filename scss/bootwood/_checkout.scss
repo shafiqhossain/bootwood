@@ -1,0 +1,414 @@
+// CART
+
+.path-cart {
+  .view-commerce-cart-form {
+    .view-header h1 {
+      color: $bootwood-orange;
+      font-weight: bold;
+      @media screen and (max-width: $screen-sm) {
+        text-align: center;
+      }
+    }
+
+    .table-responsive {
+      border: none;
+
+      thead tr {
+        background-color: white;
+        @media screen and (max-width: $screen-sm) {
+          display: none;
+        }
+      }
+
+      tbody tr {
+        background-color: white;
+        @media screen and (max-width: $screen-sm) {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          margin-bottom: -5rem;
+
+          td {
+            border: none;
+          }
+
+          .views-field-field-product-image {
+            margin-top: 5rem;
+            width: 40%;
+          }
+
+          .views-field-product-id {
+            position: absolute;
+            left: 40%;
+            top: 5rem;
+            float: right;
+            .sku-code {
+              position: absolute;
+              left: -63%;
+              bottom: 5rem;
+            }
+          }
+
+          .views-field-price__number {
+            position: relative;
+            top: 2rem;
+          }
+          .views-field-edit-quantity {
+            position: relative;
+            top: -2rem;
+            .form-type-number {
+              width: 3.5rem;
+              float: right;
+              margin-right: 9rem;
+            }
+          }
+
+          .views-field-remove-button {
+            position: relative;
+            bottom: 7.01rem;
+            .delete-order-item {
+              float: right;
+            }
+          }
+        }
+
+        .sku-code {
+          background-color: $bootwood-orange;
+          width: 6rem;
+          display: block;
+          border-radius: 5px;
+          margin: 1rem 0;
+          padding: 5px;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+
+    .views-field-product-id {
+      white-space: normal;
+      a {
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    .views-field-price__number {
+      font-weight: bold;
+    }
+
+    .form-type-number {
+      text-align: center;
+      input {
+        border: 1px solid orange;
+        border-radius: 0;
+        width: 5.5rem;
+        float: left;
+        background-color: white;
+      }
+    }
+
+    .delete-order-item {
+      background-color: $bootwood-orange;
+      border-color: $bootwood-orange;
+      border-radius: 0;
+      text-transform: uppercase;
+
+      .icon {
+        display: none;
+      }
+    }
+
+    .order-total-line__subtotal {
+      display: none;
+    }
+
+    .order-total-line__total .order-total-line-label,
+    .order-total-line__total .order-total-line-value {
+      border-top: 1px solid black;
+      padding-top: 5px;
+    }
+
+    .form-actions {
+      float: right;
+      margin-top: 3rem;
+      margin-bottom: 10rem;
+      .btn-info {
+        color: $bootwood-orange;
+        background-color: $bootwood-brown;
+        border-color: $bootwood-brown;
+      }
+      .button[data-drupal-selector="edit-checkout"] {
+        background-color: $bootwood-orange;
+        color: white;
+        border-color: $bootwood-orange;
+      }
+    }
+  }
+
+  .canadian-message {
+    float: left;
+    margin: 15rem 0 10rem;
+  }
+}
+
+.path-checkout .commerce-checkout-flow-bootwood-samples-checkout-flow {
+
+  textarea:hover,
+  select:hover {
+    background: none;
+  }
+
+  .commerce-cart-form {
+
+    .form-type-number {
+      border: 1px solid orange;
+      border-radius: 0;
+      width: 30%;
+      padding: 0 3px 0px 15px;
+      text-align: center;
+    }
+  }
+
+  .js-form-submit {
+    margin: 0 auto;
+    display: block;
+    color: white;
+    width: 15rem;
+  }
+
+  .canadian-message {
+    width: 97%;
+  }
+
+  .checkout-pane {
+    .panel-title {
+      color: $bootwood-orange;
+      text-align: center;
+      font-weight: bold;
+      font-size: 40px;
+      padding-bottom: 5rem;
+    }
+  }
+
+  //CONTACT INFORMATION
+  .form-wrapper[data-drupal-selector="edit-profile-formcontact-information-profile"] {
+    .field--type-boolean label {
+      padding-left: 3rem;
+    }
+  }
+
+  //SHIPPING
+
+  .checkout-pane-billing-information {
+    .panel-title {
+      color: $bootwood-orange;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .form-item {
+      display: block;
+
+      .form-select {
+        border: 1px solid $bootwood-grey;
+        line-height: unset;
+        height: 50px;
+      }
+    }
+
+    .select-wrapper {
+      .form-select {
+        border: 1px solid $bootwood-grey;
+        line-height: unset;
+        height: 50px;
+      }
+    }
+
+    .input-group {
+      width: 100%;
+      margin: 0 auto;
+      margin-left: -5px;
+    }
+
+    .input-group-addon {
+      display: none;
+    }
+  }
+
+  .country:after {
+    top: 25px;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    .form-submit {
+      margin: unset;
+      &:focus {
+        background-color: $bootwood-orange;
+      }
+    }
+    a {
+      display: block;
+      margin-left: 2rem;
+      background-color: white;
+      width: 15rem;
+      border: 1px solid grey;
+      text-align: center;
+      color: black;
+      height: 3.5rem;
+      padding: 6px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    .path-shipping .canadian-message {
+      float: unset;
+      width: 55%;
+      margin: 5rem auto 15rem;
+    }
+  }
+
+  //REVIEW
+  .view-commerce-checkout-order-summary {
+    .view-header {
+      color: orange;
+      font-size: 40px;
+      margin: 3rem 0 7rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    thead th {
+      border-color: black !important;
+      font-size: 22px;
+    }
+    tr {
+      background-color: white !important;
+    }
+
+    td {
+      border: none !important;
+
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .checkout-pane-review {
+
+    .panel-heading {
+      width: 100%;
+
+      .panel-title {
+        font-size: 20px;
+        border-bottom: 1px solid black;
+        font-weight: bold;
+        text-align: left;
+        color: black;
+        padding-bottom: unset;
+      }
+    }
+
+    .field--label-above {
+      display: flex;
+      margin: 0 0 2rem;
+
+      .field--label {
+        margin-right: 1rem;
+      }
+    }
+
+    #edit-review-billing-information {
+      .Address.line1-label {
+        display: none;
+      }
+    }
+  }
+  @media screen and (min-width: $screen-sm) {
+    .path-review .canadian-message {
+      float: unset;
+      width: 55%;
+      margin: 10rem auto 15rem;
+    }
+  }
+
+  //COMPLETE
+  .checkout-complete {
+    h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+      color: $bootwood-orange;
+      margin-top: 7rem;
+    }
+
+    p {
+      color: $bootwood-orange;
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .path-contact .canadian-message,
+  .path-shipping .canadian-message,
+  .path-review .canadian-message,
+  .path-complete .canadian-message {
+    float: unset;
+    width: 55%;
+    margin: 10rem auto 15rem;
+
+    img {
+      margin-top: 1rem;
+      width: 120px;
+    }
+
+    .person-details {
+      margin-top: 3rem;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .path-contact .canadian-message,
+  .path-shipping .canadian-message,
+  .path-review .canadian-message,
+  .path-complete .canadian-message {
+    float: unset;
+    width: 70%;
+    margin: 10rem auto 30rem;
+
+    img {
+      width: 85%;
+    }
+
+    .person-details {
+      font-size: 14px;
+    }
+  }
+}
+
+.checkout-pane {
+  #edit-profile-formcontact-information-profile {
+    .field--name-field-email, .field--name-field-phone {
+      margin-bottom: 50px;
+    }
+    .field--name-field-privacy-policy {
+      margin-top: 30px;
+    }
+  }
+}
+
+.samples-canadian-message .canadian-message .bold {
+  font-weight: 700;
+}

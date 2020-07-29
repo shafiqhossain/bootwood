@@ -1,0 +1,26 @@
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'clearfix',
+]
+%}
+<section{{ attributes.addClass(classes) }} style="background-image: url('{{ background_image }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+  <div class="container block-about-bootwood">
+    <div class="row justify-content-lg-center align-items-center">
+      <div class="col col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 white-card" style="background-color: white;">
+        {{ title_prefix }}
+        {% if label %}
+          <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+        {% endif %}
+        {{ title_suffix }}
+        {% block content %}
+          {{ content|without('field_image', 'field_link') }}
+        {% endblock %}
+        <div style="clear: both"></div>
+        {{ content.field_link }}
+      </div>
+    </div>
+  </div>
+</section>

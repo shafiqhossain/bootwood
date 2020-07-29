@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="footer-top">
+  <div class="row footer-top-wrapper col-xs-10 col-xs-offset-1">
+    <div class="footer-column footer-column-logo col-xs-4 col-sm-2 col-lg-1">
+      <a class="logo navbar-btn pull-left col-xs-3 col-xs-offset-1 col-sm-4 col-sm-offset-0" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+        <img src="/themes/custom/bootwood/images/bootwood_logo_white.svg" class="bootwood-logo" alt="{{ 'Home'|t }}" />
+      </a>
+    </div>
+    <div class="footer-column footer-column-wider-padding col-xs-8 col-sm-5 col-sm-offset-0 col-lg-2">{{ contactus }}</div>
+    <div class="footer-column footer-column-wider-padding col-xs-8 col-xs-offset-4 col-sm-5 col-sm-offset-0 col-lg-2">{{ aboutus }}</div>
+    <div class="footer-column footer-column-wider-padding footer-column-sas col-xs-8 col-xs-offset-4 col-sm-5 col-sm-offset-2 col-lg-2 col-lg-offset-0">{{ supportandservice }}</div>
+    <div class="footer-column footer-column-wider-padding col-xs-8 col-xs-offset-4 col-sm-5 col-sm-offset-0 col-lg-2 col-lg-offset-0">{{ information }}</div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div class="footer-border-wrapper col-xs-10 col-xs-offset-1">
+    <div class="copyright">&copy; {{ 'Bootwood AS'|t }} {{ "now"|date("Y") }} </div>
+    <div class="footer-links-wrapper">
+      <a href="https://instagram.com/bootwoodwood" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://twitter.com/bootwoodwood" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://facebook.com/bootwoodwood" target="_blank"><i class="fa fa-facebook-f"></i></a>
+    </div>
+  </div>
+</div>

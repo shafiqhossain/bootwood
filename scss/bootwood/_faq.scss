@@ -1,0 +1,38 @@
+.path-faq {
+  .ui-state-default {
+    border-radius: 10px;
+    background: none;
+    border: 1px solid white;
+  }
+
+  .ui-accordion-content,
+  .ui-accordion-content-active {
+    background: none;
+    border: none;
+  }
+
+  .views-accordion-header {
+    color: black;
+    outline: none;
+  }
+
+  .ui-state-default a {
+    display: inline;
+    color: black;
+  }
+
+  .ui-state-active {
+    background-color: $bootwood-orange;
+    border: 1px solid $bootwood-orange;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+}
+
+.path-node-type-faq {
+  .author {
+    display: none;
+  }
+}

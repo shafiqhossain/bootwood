@@ -1,0 +1,128 @@
+//==========================
+// Inside bootwood page
+//==========================
+// base theming is done in _projects.scss here is code not applicable for projects view
+.view-blog-posts.view-display-id-page_1 {
+  .views-field-view-node-1 {
+    font-size:0;
+  }
+  .views-field-field-blog-image {
+    margin-bottom: 30px;
+  }
+
+  .feed-icons {
+    position: absolute;
+    top: -44px;
+    background-image: url('../images/rss.png');
+    a {
+      font-size: 0;
+      display: inline-block;
+      width: 30px;
+      height: 19px;
+    }
+  }
+
+  .views-field-title .field-content {
+    color: #1d1d1d;
+    font-weight: bold;
+  }
+
+  .more-link a {
+    @include right_arrow();
+    color: $bootwood-orange;
+  }
+}
+
+
+//BLOG POST SINGLE NODE
+
+@media screen and (max-width: $screen-xs) {
+  .page-node-type-blog-post {
+    .breadcrumb {
+      display: none;
+    }
+  }
+}
+
+.page-node-type-blog-post {
+
+  .page-header {
+    margin: 20px 0;
+  }
+
+  .node-blog-post-title {
+    font-size: 40px;
+    width: 100%;
+    color: $bootwood-orange;
+    font-weight: bold;
+  }
+  .field--name-field-blog-post-date {
+    color: $bootwood-orange;
+    margin-left: 10px;
+  }
+
+  .field--name-field-category {
+    display: flex;
+    color: $bootwood-orange;
+    margin-bottom: 3rem;
+    .field--item {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .field--name-field-blog-image {
+    .field--label {
+      display: none;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 10rem;
+    }
+
+  }
+
+  .field--name-body {
+    padding: 0 10rem;
+    @media screen and (max-width: $screen-sm) {
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto!important;
+    }
+  }
+
+  .blog-post-add-comment {
+    padding: 3rem 10rem;
+    @media screen and (max-width: $screen-sm) {
+      padding: 0;
+    }
+
+    .control-label {
+      display: none;
+    }
+
+    input,
+    .form-textarea-wrapper {
+      border-radius: 0px;
+      border: 1px solid $bootwood-orange;
+    }
+
+    .filter-wrapper {
+      display: none;
+    }
+
+    button {
+      background-color: $bootwood-orange;
+      border-color: $bootwood-orange;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $bootwood-orange;
+      }
+      @media screen and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+  }
+}

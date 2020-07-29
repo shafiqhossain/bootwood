@@ -1,0 +1,92 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        {{ label }}{{ ' - ' }}{{ 'Internal evaluation'|t }}
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+  </header>
+
+  <div class="flex-table flex-table-description flex-table-description-top row" role="rowgroup">
+      <div class="form-label flex-row">
+        {{ "Claim details"|t }}
+      </div>
+  </div>
+  <div class="flex-table row row-first" role="rowgroup">
+        {{ content.field_customer_feedback_number }}
+        {{ content.field_date_of_registration }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+        {{ content.field_bootwood_contact }}
+        {{ content.field_sales_order }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+        {{ content.field_year_of_purchase }}
+        {{ content.field_specific_eck_product }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+        {{ content.field_main_reason_claim }}
+  </div>
+
+  <br/><br/>
+
+  <div class="flex-table flex-table-description flex-table-description-top row" role="rowgroup">
+    <div class="form-label flex-row">
+        {{ "Contact details"|t }}
+    </div>
+  </div>
+  <div class="flex-table row row-first" role="rowgroup">
+        {{ content.field_name }}
+        {{ content.field_last_name }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+        {{ content.field_installation_address }}
+        {{ content.field_phone_number }}
+  </div>
+  <div class="flex-table row" role="rowgroup">
+        {{ content.field_email }}
+  </div>
+
+  <br/><br/>
+
+  <div class="flex-table flex-table-no-top-description row row-first" role="rowgroup">
+  {{ content.field_description_of_the_issue }}
+  </div>
+
+  <br/><br/>
+  {{ content.field_pictures }}
+  <br/><br/>
+  {{ content.field_proof }}
+  <br/><br/>
+  <div id="claim-comments">
+    {{ content.field_conversation_with_customer }}
+  </div>
+
+  <br/><br/>
+
+  <div class="flex-table flex-table-no-top-description row row-first" role="rowgroup">
+        {{ content.field_conclusion_status }}
+  </div>
+  <div class="flex-table row " role="rowgroup">
+    {{ content.field_date_of_inspection_evaluat }}
+  </div>
+
+  <br/><br/>
+
+  <a class="btn btn-primary" href="/node/{{ node.id }}/edit/internal-evaluation?destination=/claims/{{ node.id }}/evaluation">Edit</a>
+
+</article>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Arrows-Diagrams_Arrows_arrow-right" data-name="Arrows-Diagrams / Arrows / arrow-right" transform="translate(0.5 0.5)">
+    <g id="Group_73" data-name="Group 73">
+      <g id="Light_73" data-name="Light 73">
+        <path id="Shape_335" data-name="Shape 335" class="cls-1" d="M272.757,456h-24" transform="translate(-248.757 -444)"/>
+        <path id="Shape_336" data-name="Shape 336" class="cls-1" d="M259.257,469,270.9,457.819a1.157,1.157,0,0,0,0-1.636L259.257,445" transform="translate(-247.243 -445)"/>
+      </g>
+    </g>
+  </g>
+</svg>

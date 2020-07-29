@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.002 17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #575757;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="product_filters" transform="translate(0.501 0.5)">
+    <g id="Group_181" data-name="Group 181">
+      <g id="settings-horizontal">
+        <path id="Oval_152" data-name="Oval 152" class="cls-1" d="M481.889,1725.278a1.889,1.889,0,1,0-1.889-1.889A1.889,1.889,0,0,0,481.889,1725.278Z" transform="translate(-473.909 -1721.5)"/>
+        <path id="Shape_956" data-name="Shape 956" class="cls-1" d="M484,1723.5h6.161" transform="translate(-474.159 -1721.611)"/>
+        <path id="Shape_957" data-name="Shape 957" class="cls-1" d="M473.521,1723.5h6.116" transform="translate(-473.521 -1721.611)"/>
+        <path id="Oval_153" data-name="Oval 153" class="cls-1" d="M477.889,1731.778a1.889,1.889,0,1,0-1.889-1.889A1.889,1.889,0,0,0,477.889,1731.778Z" transform="translate(-473.659 -1721.889)"/>
+        <path id="Shape_958" data-name="Shape 958" class="cls-1" d="M480,1730h9.941" transform="translate(-473.937 -1722)"/>
+        <path id="Shape_959" data-name="Shape 959" class="cls-1" d="M473.521,1730h2.338" transform="translate(-473.521 -1722)"/>
+        <path id="Oval_154" data-name="Oval 154" class="cls-1" d="M479.889,1738.278a1.889,1.889,0,1,0-1.889-1.889A1.889,1.889,0,0,0,479.889,1738.278Z" transform="translate(-473.789 -1722.278)"/>
+        <path id="Shape_960" data-name="Shape 960" class="cls-1" d="M482,1736.5h8.052" transform="translate(-474.048 -1722.389)"/>
+        <path id="Shape_961" data-name="Shape 961" class="cls-1" d="M473.521,1736.5h4.23" transform="translate(-473.521 -1722.389)"/>
+      </g>
+    </g>
+  </g>
+</svg>

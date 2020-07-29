@@ -1,0 +1,617 @@
+// ================================
+// Font used in site
+// ================================
+
+@font-face { font-family: 'Sofia Pro Light';
+  src:  url('../webfonts/sofiapro-light.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Noway Regular';
+  src: url('../webfonts/noway-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Noway Italic';
+  src: url('../webfonts/noway_regular_italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
+// OpenSans-Heavy
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../webfonts/OpenSans-ExtraBold.ttf') format('truetype');
+  font-weight: bolder;
+}
+
+//OpenSans-Regular
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../webfonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+//OpenSans-Bold
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../webfonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+//OpenSans-Semibold
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('../webfonts/OpenSans-Semibold.ttf') format('truetype');
+  font-weight: normal;
+}
+
+// ================================
+// Global font
+// ================================
+* {
+  color: $bootwood-dark-grey;
+  font-family: $primary-font;
+}
+
+// ================================
+// Main container
+// ================================
+.main-container {
+  position: relative;
+  @media screen and (min-width: $screen-md) {
+    min-height: calc(100vh - 401px);
+  }
+}
+
+
+.dialog-off-canvas-main-canvas {
+  background-color: $bootwood-background;
+}
+
+//.path-frontpage .main-container {
+//  margin: 0;
+//  width: 100%;
+//  padding-left: 0;
+//  padding-right: 0;
+//  font-family: 'Open Sans', sans-serif;
+//  background-color: $bootwood-background;
+//
+//  .row {
+//    margin-right: 0;
+//  }
+//
+//  .col-sm-12 {
+//    padding-right: 0;
+//  }
+//
+//  p {
+//    font-size: 22px;
+//    word-break: break-word;
+//
+//    @media screen and (max-width: $screen-sm) {
+//      margin-top: 0;
+//    }
+//  }
+//
+//  h2.block-title {
+//    @media screen and (max-width: $screen-xs) {
+//      margin-bottom: 120px;
+//      margin-top: 0;
+//    }
+//  }
+//}
+
+// ================================
+// Mobile container
+// ================================
+@media screen and (max-width: $screen-md) {
+  .container {
+    padding: 50px 30px 0;
+  }
+  .page-node-type-project .container,
+  .path-projects .container {
+    padding: 24px 30px 0;
+  }
+}
+
+//===================
+// Global font
+//===================
+
+* {
+  color: $bootwood-dark-grey;
+  font-family: $primary-font;
+}
+
+// ================================
+// Breadcrumbs
+// ================================
+.breadcrumb {
+  display: none;
+}
+
+// ================================
+// h2 styling
+// ================================
+.views-element-container {
+  h2 {
+    font-size: 42px;
+    margin: 100px 0;
+    text-align: center;
+  }
+}
+
+// ================================
+// Orange button
+// ================================
+.button-orange {
+  background-color: white;
+  border-radius: 4px;
+  border: 2px solid $bootwood-orange;
+  margin-right: 50px;
+  padding: 2px 22px;
+  transition: background-color 0.5s;
+
+  a {
+    color: $bootwood-orange;
+    transition: color 0.5s;
+  }
+
+  &:hover {
+    background-color: $bootwood-orange;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+//==================================
+// Float right classes for columns
+//==================================
+@media (min-width: $screen-sm-min) {
+  .col-sm-pull-right {
+    float: right;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .col-md-pull-right {
+    float: right;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .col-lg-pull-right {
+    float: right;
+  }
+}
+
+//============
+// No padding
+//============
+.nopadding {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+// ========================
+// Slick slider full width
+// ========================
+
+//paste in slick
+@mixin full-width-slider() {
+  position: relative;
+  max-width: 100vw;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+
+  .slick-slider img {
+    width: 100vw;
+  }
+}
+
+//================
+// ARROWS
+//================
+
+//paste in slick
+@mixin arrow-slider-gallery() {
+  position: relative;
+
+  .slick__arrow {
+    display: flex;
+    position: static;
+    height: 50%;
+    width: 20%;
+
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column;
+      height: 90%;
+    }
+
+    .slick-prev.slick-arrow::before,
+    .slick-next.slick-arrow::before {
+      font-size: 2.75rem;
+      position: absolute;
+      visibility: visible;
+      height: 42px;
+      width: 42px;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    .slick-prev.slick-arrow::before {
+      content: '';
+      left: 5%;
+      background-image: url('../images/Big_arrow_left.svg');
+    }
+
+    .slick-next.slick-arrow::before {
+      content: '';
+      right: 5%;
+      background-image: url('../images/Big_arrow_right.svg');
+    }
+  }
+}
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  &.toolbar-horizontal {
+    padding-top: 66px!important;
+  }
+}
+
+// ===========================
+// Right link arrow
+// ===========================
+@keyframes animate-right {
+  from {
+    right: -22px;
+  }
+
+  to {
+    right: -30px;
+  }
+}
+
+@mixin right_arrow() {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '\2192';
+    color: #f79d19;
+    right: -22px;
+    display: inline-block;
+    transition: right 1000ms ease-in-out;
+  }
+  &:hover:after {
+    right: -30px;
+    animation-duration: 0.25s;
+    animation-name: animate-right;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+// ===========================
+// Left link arrow
+// ===========================
+@keyframes animate-left {
+  from {
+    left: -22px;
+  }
+
+  to {
+    left: -30px;
+  }
+}
+
+@mixin left_arrow() {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '\2190';
+    color: #f79d19;
+    left: -22px;
+    display: inline-block;
+  }
+  &:hover:after {
+    left: -30px;
+    animation-duration: 0.25s;
+    animation-name: animate-left;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin border_bottom() {
+  &:after {
+    content: '';
+    border-bottom: 2px solid $bootwood-orange;
+    width: 60px;
+    display: block;
+    margin: 25px auto 0 auto;
+  }
+}
+
+.col-no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+body.navbar-is-fixed-top {
+  margin-top: 86px;
+}
+
+.panel {
+  background-color: transparent;
+}
+
+@media (min-width: $screen-lg-min) {
+  .page-header,
+  .page-header span {
+    font-size: 42px;
+    font-weight: 300;
+  }
+}
+
+
+// ======
+// Pager
+// ======
+
+.pager-nav {
+  padding-bottom: 10%;
+  text-align: center;
+
+  @media screen and (min-width: $screen-md) {
+    text-align: right;
+  }
+
+  ul {
+    li {
+      a {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0;
+        color: $bootwood-orange;
+        height: 45px;
+        padding: 11px 7px;
+        width: 45px;
+        text-align: center;
+        transition: border 0.3s;
+
+        &:hover {
+          background-color: transparent;
+          border: 1px solid $bootwood-orange;
+          color: $bootwood-orange;
+        }
+
+      }
+
+      &:first-child>a,
+      &:last-child>a {
+        border-radius: 0;
+      }
+    }
+
+    .is-active.active {
+      a {
+        background-color: $bootwood-orange;
+        border-color: $bootwood-orange;
+        border-radius: 0;
+      }
+    }
+
+    // next, last, previous, first
+
+    .pager__item--next,
+    .pager__item--last,
+    .pager__item--previous,
+    .pager__item--first {
+      a {
+        border: none;
+        width: max-content;
+
+        &:hover {
+          background-color: transparent;
+          border: transparent;
+        }
+
+        span {
+          color: $bootwood-orange;
+        }
+      }
+    }
+  }
+
+  // mobile pager (limited to 5 pages)
+
+  @media screen and (max-width: 991px) {
+    .pager-section-wrapper {
+      font-weight: bold;
+      margin-top: 3%;
+
+      li {
+        display: inline;
+        margin: 0 4%;
+
+        a {
+          border: none;
+          width: max-content;
+
+          &:hover {
+            background-color: transparent;
+            border: transparent;
+          }
+
+          span {
+            color: $bootwood-orange;
+          }
+        }
+      }
+
+      .pager__item--first,
+      .pager__item--previous {
+        float: left;
+      }
+
+      .pager__item--next,
+      .pager__item--last {
+        float: right;
+      }
+    }
+  }
+
+
+}
+
+
+// ================================
+// Orange button slider to gallery
+// ================================
+@mixin button-slider-orange () {
+  background: #f79d19;
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: -75px;
+  width: 75.2px;
+
+  &:before {
+    content: '\2192';
+    color: white;
+    font-size: 40px;
+    left: 25%;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 25%;
+  }
+}
+
+
+@mixin square-button-orange () {
+  color: transparent;
+  background-color: $bootwood-orange;
+  bottom: 0;
+  height: 50px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 50px;
+
+  &:before {
+    content: "\2192";
+    background-size: cover;
+    bottom: 32%;
+    color: white;
+    font-size: 26px;
+    transition: right .25s ease-in-out;
+    height: 24px;
+    position: absolute;
+    width: 23px;
+  }
+  &:hover:before {
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: .25s
+  }
+}
+
+@keyframes button-right-arrow-small {
+  0%   {right: calc(50% - 20px);}
+  100% {right: calc(50% - 4px);}
+}
+
+@mixin square-button-arrow-small-right() {
+  @include square-button-orange();
+  &:before {
+    right: calc(50% - 12px);
+  }
+  &:hover:before {
+    right: calc(50% - 20px);
+    animation-duration: 0.4s;
+    animation-name: button-right-arrow-small;
+  }
+}
+
+@keyframes button-right-arrow-long {
+  0%   {right: calc(50% - 24px);}
+  100% {right: 50%;}
+}
+
+@mixin square-button-arrow-long-right() {
+  @include square-button-orange();
+  &:before {
+    right: calc(50% - 12px);
+  }
+  &:hover:before {
+    right: calc(50% - 24px);
+    animation-duration: 0.4s;
+    animation-name: button-right-arrow-long;
+  }
+}
+
+@mixin vertical-button-right-arrow() {
+  &:before {
+    transition: right .25s ease-in-out;
+    right: calc(50% - 12px);
+  }
+  &:hover:before {
+    right: calc(50% - 24px);
+    animation-duration: 0.4s;
+    animation-name: button-right-arrow-long;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: .25s
+  }
+}
+
+
+
+.slick {
+  @include arrow-slider-gallery();
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6em;
+}
+
+@mixin default-font-size() {
+  font-size: 62.5%;
+  @media screen and (min-width: 2400px) {
+    font-size: 93.75%;
+  }
+  @media screen and (min-width: 3500px) {
+    font-size: 125%;
+  }
+}
+.download-button {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.alert {
+  margin-top: 30px;
+}
